@@ -1,0 +1,68 @@
+// ======= Utility classes start here =========
+
+.color {
+    &--theme-color {
+        color: $theme-color !important;
+    }
+    &--secondary-color {
+        color: $secondary-color !important;
+    }
+}
+
+.bg {
+    &--body {
+        background-color: $body-color !important;
+    }
+
+    &--white {
+        background-color: $white-color !important;
+    }
+
+    &--theme-color {
+        background-color: $theme-color !important;
+    }
+
+    &--semi-body {
+        background-color: rgba($body-color, $alpha: .60);
+    }
+
+    &--cover {
+        background-size: cover;
+    }
+
+    &--fixed {
+        background-attachment: fixed;
+    }
+}
+
+
+.padding-top {
+    padding-top: 80px;
+    @include breakpoint(lg){
+        padding-top: 130px;
+    }
+}
+
+.padding-bottom {
+    padding: 80px;
+    @include breakpoint(lg){
+        padding-top: 130px;
+    }
+}
+
+
+.subtittle {
+    @extend %mb-5;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $theme-color;
+}
+
+.text-rotator {
+    @include add-prefix(transition, all .5s cubic-bezier(.45, .05, .55, .95));
+}
+
+
+.mb-40 {
+    @extend %mb-40;
+}

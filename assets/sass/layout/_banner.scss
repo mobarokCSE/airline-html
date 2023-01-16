@@ -1,0 +1,32 @@
+.banner {
+    @extend %of-hidden;
+    @extend %p-rel;
+    @include background-cover;
+    padding-block: 120px;
+
+    @include breakpoint(md) {
+        padding-block: 150px;
+    }
+
+    @include breakpoint(lg) {
+        padding-block: 180px;
+    }
+
+    @include breakpoint(xxl) {
+        padding-block: 320px;
+    }
+
+
+    &__content {
+
+        h1 {
+            color: $white-color;
+            max-inline-size: 22ch;
+            line-height: 1.4;
+        }
+    }
+}
+
+
+
+

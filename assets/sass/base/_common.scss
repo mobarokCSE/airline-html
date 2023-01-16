@@ -1,0 +1,52 @@
+
+
+
+// default input field style (overrides some bootstrap css)
+.form-control {
+    background-color: transparent;
+    border-color: rgba($theme-color, $alpha: 0.20);
+    padding: 1rem 1.5rem;
+
+    &:focus {
+        box-shadow: none;
+        border-color: $theme-color;
+    }
+}
+
+.form-check {
+    &-input {
+        &:focus{
+            box-shadow: none;
+        }
+        &:checked {
+            background-color: $theme-color;
+            border-color: $theme-color;
+        }
+    }
+    &-label {
+        color: $text-color !important
+    }
+}
+
+// scrollTop
+.scrollToTop {
+    @include add-prefix(transition, $transition);
+    position: fixed;
+    bottom: -20%;
+    right: 5%;
+    z-index: 9;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: $theme-color;
+    text-align: center;
+    border-radius: 5px;
+    color: $body-color;
+
+    &:hover {
+        @include add-prefix (transform, translateY(-5px));
+        color: $body-color;
+    }
+
+
+} 

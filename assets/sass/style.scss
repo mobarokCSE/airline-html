@@ -1,0 +1,60 @@
+/*!
+Template Name: kushiara
+Template URI: 
+Author: thetork
+Author URI: 
+Description: Description
+Version: 1.0.0
+Text Domain: kushiara
+Tags: airline , travel company.
+
+*/
+
+
+
+
+
+
+
+
+
+/*=====================================================================*/
+
+@charset "UTF-8";
+
+// 1. Configuration and helpers
+@import 'abstracts/variables',
+'abstracts/functions',
+'abstracts/mixins';
+
+// 2. Vendors
+@import 'vendors/normalize',
+// 'vendors/text-rotator',
+'vendors/nice-select',
+'vendors/rfs';
+
+// 3. Base stuff
+@import 'base/fonts',
+'base/typography',
+'base/animations',
+'base/common',
+'base/helpers';
+
+@import "abstracts/extend";
+
+// 4. Layout-related sections
+@import 'layout/header',
+'layout/banner',
+'layout/footer';
+
+
+// 5. Components
+@import 'components/flight',
+'components/button',
+'components/service';
+
+// 6. Page-specific styles
+@import 'pages/home';
+
+// 7. Themes
+@import 'themes/theme';

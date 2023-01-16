@@ -1,0 +1,33 @@
+.service {
+    padding-block: 80px;
+
+    @include breakpoint(lg) {
+        padding-block: 100px;
+    }
+
+    @include breakpoint(xxl) {
+        padding-block: 130px;
+    }
+
+    &__item {
+        &-inner {
+            background-color: $card-color;
+            @extend %p-25;
+            @extend %border-radius-8;
+        }
+
+        &-thumb {
+            img {
+                @extend %mb-30;
+            }
+        }
+
+        &-content {
+            h4 {
+                @extend %mb-15;
+            }
+
+        }
+    }
+
+}

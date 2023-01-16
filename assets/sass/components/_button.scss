@@ -1,0 +1,68 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+//default button style
+.default-btn {
+    @extend %p-rel,
+    %d-inline-block,
+    %of-hidden,
+    %text-center;
+    @include font-size(14px);
+    text-decoration: none;
+    font-family: $title-font;
+    color: $white-color;
+    padding: 0 1.5rem;
+    line-height: 48px;
+    transition: $transition;
+    background: $theme-color;
+    text-transform: capitalize;
+    font-weight: 600;
+    @extend %border-radius-8;
+    border: 2px solid transparent;
+
+
+    @include breakpoint(xl) {
+        padding: 0 2.25rem;
+    }
+
+    span {
+        position: inherit;
+        z-index: 1;
+
+        svg,
+        img {
+            @extend %mr-5;
+        }
+    }
+
+    &--small {
+        line-height: 46px;
+        padding: 0 1.25rem;
+    }
+
+
+
+
+    &:hover {
+        color: $white-color;
+        transform: translateY(-3px);
+        background-color: darken($theme-color, $amount: 5);
+    }
+
+    &-active {
+        background-color: $theme-color;
+        border-color: $theme-color;
+    }
+
+    &--secondary {
+        background-color: transparent;
+        color: $title-color;
+        border-color: $title-color;
+
+        &:hover {
+            background-color: $title-color;
+            color: $white-color;
+        }
+    }
+}
