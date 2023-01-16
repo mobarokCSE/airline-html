@@ -76,3 +76,43 @@
       },
       speed: 5000,
   });
+
+
+//   testimonial slider
+// ***** testimonial thumb slider
+  const testimonialThumb = new Swiper('.testimonial__thumb', {
+      grabCursor: true,
+      slidesPerView: 1,
+      loop: true,
+    //   autoplay: {
+    //       delay: 1,
+    //       disableOnInteraction: true
+    //   },
+      speed: 5000,
+
+  });
+
+  //   testimonial slider
+  // ***** testimonial detail slider
+
+    const testimonialDtail = new Swiper('.testimonial__detail', {
+        grabCursor: true,
+        slidesPerView: 1,
+        loop: true,
+        //   autoplay: {
+        //       delay: 1,
+        //       disableOnInteraction: true
+        //   },
+
+        	// direction: 'vertical',
+        	//     pagination: {
+        	//         clickable: true,
+        	//         el: '.swiper-pagination',
+        	//         type: 'bullets',
+        	//     },
+        speed: 5000,
+        thumbs: {
+            swiper: testimonialThumb
+        }
+
+    });

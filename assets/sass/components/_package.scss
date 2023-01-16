@@ -12,7 +12,7 @@
                 @extend %w-100,
                 %h-100;
                 @include add-prefix(transition, $transition);
-                object-fit: cover;
+                // object-fit: cover;
 
                 &:hover {
                     @include add-prefix(transform, scale(1.05));

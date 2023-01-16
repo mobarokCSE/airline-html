@@ -1,0 +1,11 @@
+.testimonial {
+    &__wrapper{
+        @extend %flex;
+        @extend %justify-between;
+    }
+
+    &__detail{
+        background-color: $bg-color;
+        @extend %p-20;
+    }
+}
