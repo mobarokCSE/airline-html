@@ -1,0 +1,53 @@
+.package {
+    &__item {
+        &-inner {
+            @extend %p-rel;
+        }
+
+        &-thumb {
+            @extend %of-hidden;
+            border-radius: 15px 15px 0px 0px;
+
+            img {
+                @extend %w-100,
+                %h-100;
+                @include add-prefix(transition, $transition);
+                object-fit: cover;
+
+                &:hover {
+                    @include add-prefix(transform, scale(1.05));
+
+                }
+            }
+
+        }
+
+        &-content {
+            @extend %p-15;
+            border: 1px solid $card-border-color;
+            border-top: none;
+            border-radius: 0 0 15px 15px;
+            // @extend %of-hidden;    //Why small space
+
+            @include breakpoint(lg) {
+                padding: 25px;
+                // @extend %p-25;
+                //TODO:: why not use @extend %p-25
+            }
+
+            a{
+                @extend %mb-15;
+            }
+            h5{
+                @extend %mb-15;
+            }
+            p{
+                font-size: 14px;
+                a{
+                    color: $theme-color;
+                }
+            }
+
+        }
+    }
+}

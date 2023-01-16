@@ -1,0 +1,58 @@
+.offer {
+
+    &__inner {
+        @extend %p-rel;
+    }
+
+    &__thumb {
+        @extend %of-hidden;
+        border-radius: 15px;
+
+        img {
+            @extend %w-100,
+            %h-100;
+            @include add-prefix(transition, $transition);
+            object-fit: cover;
+        }
+
+        &:hover {
+            img {
+                @include add-prefix(transform, scale(1.05));
+            }
+
+        }
+
+    }
+
+    &__content {
+        @extend %p-abs;
+        left: 0;
+        bottom: 0;
+        @extend %p-15;
+        color: $white-color;
+
+        &-top{
+            p{
+                @extend %mb-0;
+                span{
+                    font-size: 24px;
+                    font-weight: 600;
+                }
+            }           
+        }
+
+        img {
+            top: 0 !important;
+        }
+
+        h6 {
+            color: $white-color;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+}
+
+// background: linear-gradient(360deg, #005EB8 0%, rgba(45, 111, 174, 0.9) 28.89%, rgba(251, 253, 255, 0) 100%);

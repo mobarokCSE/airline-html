@@ -1,5 +1,15 @@
 
 
+// Section header start here
+.section-header {
+    margin-bottom: 30px;
+
+    @include breakpoint(lg) {
+        margin-bottom: 40px;
+    }
+
+}
+
 
 // default input field style (overrides some bootstrap css)
 .form-control {

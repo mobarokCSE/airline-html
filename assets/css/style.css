@@ -402,11 +402,11 @@ h2 {
 }
 
 h3 {
-  font-size: calc(1.325rem + 0.7714285714vw);
+  font-size: calc(1.35rem + 1.0285714286vw);
 }
 @media (min-width: 1400px) {
   h3 {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
 }
 
@@ -420,11 +420,16 @@ h4 {
 }
 
 h5 {
-  font-size: 1.25rem;
+  font-size: calc(1.275rem + 0.2571428571vw);
+}
+@media (min-width: 1400px) {
+  h5 {
+    font-size: 1.5rem;
+  }
 }
 
 h6 {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
 }
 
 img {
@@ -835,6 +840,15 @@ a:hover {
     transform: translate3d(0, 0, 0);
   }
 }
+.section-header {
+  margin-bottom: 30px;
+}
+@media (min-width: 992px) {
+  .section-header {
+    margin-bottom: 40px;
+  }
+}
+
 .form-control {
   background-color: transparent;
   border-color: rgba(0, 94, 184, 0.2);
@@ -914,17 +928,21 @@ a:hover {
 }
 @media (min-width: 992px) {
   .padding-top {
-    padding-top: 130px;
+    padding-top: 125px;
   }
 }
 
 .padding-bottom {
-  padding: 80px;
+  padding-bottom: 80px;
 }
 @media (min-width: 992px) {
   .padding-bottom {
-    padding-top: 130px;
+    padding-bottom: 125px;
   }
+}
+
+.bg-color {
+  background-color: #F9FAFB;
 }
 
 .subtittle {
@@ -942,12 +960,25 @@ a:hover {
 }
 
 /* @@@@@@@@@@@@@  Extend Property CSS start here  @@@@@@@@@@@@@@ */
-.default-btn, .banner {
+.package__item-inner, .offer__inner, .default-btn, .banner {
   position: relative;
 }
 
-.default-btn, .banner {
+.offer__content {
+  position: absolute;
+  content: "";
+}
+
+.package__item-thumb, .offer__thumb, .default-btn, .banner {
   overflow: hidden;
+}
+
+.package__item-thumb img, .offer__thumb img {
+  width: 100%;
+}
+
+.package__item-thumb img, .offer__thumb img {
+  height: 100%;
 }
 
 .default-btn {
@@ -970,11 +1001,15 @@ ol {
 }
 
 /* @@@@@@@@@@@@@  Extend Property Margin 10 - 30 CSS Writing Now  @@@@@@@@@@@@@@ */
+.offer__content-top p {
+  margin-bottom: 0;
+}
+
 .subtittle {
   margin-bottom: 5px;
 }
 
-.service__item-content h4 {
+.service__item-content h4, .package__item-content h5, .package__item-content a {
   margin-bottom: 15px;
 }
 
@@ -992,6 +1027,10 @@ ol {
 }
 
 /* @@@@@@@@@@@@@  Extend Property padding 10 - 30 CSS Writing Now  @@@@@@@@@@@@@@ */
+.package__item-content, .offer__content {
+  padding: 15px;
+}
+
 .service__item-inner {
   padding: 25px;
 }
@@ -1038,8 +1077,7 @@ ol {
   text-decoration: none;
   font-family: "Inter", sans-serif;
   color: #fff;
-  padding: 0 1.5rem;
-  line-height: 48px;
+  padding: 0.7rem 1.5rem;
   transition: all 0.3s ease;
   background: #005EB8;
   text-transform: capitalize;
@@ -1048,7 +1086,7 @@ ol {
 }
 @media (min-width: 1200px) {
   .default-btn {
-    padding: 0 2.25rem;
+    padding: 0.7rem 2.25rem;
   }
 }
 .default-btn span {
@@ -1078,19 +1116,82 @@ ol {
   color: #fff;
 }
 
-.service {
-  padding-block: 80px;
+.offer__thumb {
+  border-radius: 15px;
+}
+.offer__thumb img {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  object-fit: cover;
+}
+.offer__thumb:hover img {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+}
+.offer__content {
+  left: 0;
+  bottom: 0;
+  color: #fff;
+}
+.offer__content-top p span {
+  font-size: 24px;
+  font-weight: 600;
+}
+.offer__content img {
+  top: 0 !important;
+}
+.offer__content h6 {
+  color: #fff;
+}
+.offer__content p {
+  font-size: 14px;
+}
+
+.package__item-thumb {
+  border-radius: 15px 15px 0px 0px;
+}
+.package__item-thumb img {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  object-fit: cover;
+}
+.package__item-thumb img:hover {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+}
+.package__item-content {
+  border: 1px solid #EAECF0;
+  border-top: none;
+  border-radius: 0 0 15px 15px;
 }
 @media (min-width: 992px) {
-  .service {
-    padding-block: 100px;
+  .package__item-content {
+    padding: 25px;
   }
 }
-@media (min-width: 1400px) {
-  .service {
-    padding-block: 130px;
-  }
+.package__item-content p {
+  font-size: 14px;
 }
+.package__item-content p a {
+  color: #005EB8;
+}
+
+.partner {
+  padding-block: 100px;
+}
+
 .service__item-inner {
   background-color: #F1F8FF;
 }

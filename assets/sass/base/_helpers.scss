@@ -39,16 +39,23 @@
 .padding-top {
     padding-top: 80px;
     @include breakpoint(lg){
-        padding-top: 130px;
+        padding-top: 125px;
     }
 }
 
 .padding-bottom {
-    padding: 80px;
+    padding-bottom: 80px;
     @include breakpoint(lg){
-        padding-top: 130px;
+        padding-bottom: 125px;
     }
 }
+
+.bg-color{
+    background-color: $bg-color;
+}
+
+
+
 
 
 .subtittle {

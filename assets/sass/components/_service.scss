@@ -1,14 +1,4 @@
 .service {
-    padding-block: 80px;
-
-    @include breakpoint(lg) {
-        padding-block: 100px;
-    }
-
-    @include breakpoint(xxl) {
-        padding-block: 130px;
-    }
-
     &__item {
         &-inner {
             background-color: $card-color;
@@ -31,3 +21,5 @@
     }
 
 }
+
+
