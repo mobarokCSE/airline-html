@@ -1,0 +1,113 @@
+.footer {
+    background: $theme-color;
+    color: $white-color;
+    font-weight: 300;
+
+    &__about {
+        p {
+            @extend %my-25;
+        }
+
+        &-item {
+            @extend %mb-15;
+
+            img {
+                @extend %mr-10;
+            }
+        }
+    }
+
+    &__links {
+        &-tittle{
+            h6{
+                color: $white-color;
+            }
+        }
+        &-content {
+            @extend %mt-25;
+            img{
+                @extend %mr-5;
+                @extend %mb-10;
+            }
+
+
+            .form-control {
+                padding: 0.8rem 1.5rem;
+                border: 1px solid rgba($white-color, $alpha: .90);
+                background-color: $bg-color;
+
+                &:focus {
+                    box-shadow: none;
+                    border-color: $secondary-color;
+                }
+            }
+
+            
+
+        }
+        button {
+                background: $secondary-color;
+                color: $black-color;
+                padding: 0.8rem 1.35rem;
+                border: none;
+
+
+                svg {
+                    @include font-size(20px);
+                }
+            }
+
+    }
+
+    &__linklist {
+        &-item {
+            
+
+            &:not(:last-child) {
+                @extend %mb-20;
+            }
+
+            a {
+                @include add-prefix(transition, $transition);
+                color: $white-color;
+                @extend %p-rel,
+                %d-inline-block;
+
+                &::after {
+                    @extend %p-abs;
+                    @include add-prefix(transform, translateY(-50%));
+                    @include add-prefix(transition, $transition);
+                    top: 50%;
+                    left: 0;
+                    width: 10px;
+                    height: 2px;
+                    background-color: $white-color;
+                    opacity: 0;
+                }
+
+                &:hover {
+                    @include add-prefix(transform, translateX(10px));
+
+                    &:after {
+                        opacity: 1;
+                        left: -12px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__end{
+        border-top: 1px solid rgba($white-color, $alpha: .30);
+        @extend %flex;
+        @extend %justify-between;
+
+        &-copyright{
+            @extend %mt-10;
+        }
+        &-social{
+            @extend %mt-10;
+            
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.social {
+    @extend %flex;
+    gap: 15px;
+
+    &__link {
+        color: $white-color;
+        font-size: 22px;
+        @include add-prefix(transition, $transition);
+
+        &:hover {
+            color: $secondary-color;
+            @include add-prefix(transform, translateY(10px));
+        }
+    }
+}

@@ -1,11 +1,56 @@
 .testimonial {
-    &__wrapper{
-        @extend %flex;
-        @extend %justify-between;
+    &__item {
+        &-inner {
+
+            @include breakpoint(md) {
+                display: flex;
+            }
+
+            @include breakpoint(lg) {
+                display: flex;
+            }
+        }
+
+        &-thumb {
+
+
+            @include breakpoint(max-sm) {
+                img {
+                    border-radius: 15px;
+                }
+
+            }
+        }
+
+        &-content {
+            background-color: $bg-color;
+            border-radius: 0px 15px 15px 0px;
+            padding: 20px 15px;
+
+            h5{
+                @extend %mt-30;
+            }
+
+
+            @include breakpoint(md) {
+                padding: 20px 60px;
+                width: 100%;
+            }
+
+            @include breakpoint(lg) {
+                width: 60%;
+                padding: 50px 40px 50px 90px;
+
+                p {
+                    font-size: 24px;
+                    font-weight: 500;
+                    color: $title-color;
+                    margin-bottom: 3rem;
+                }
+            }
+
+
+        }
     }
 
-    &__detail{
-        background-color: $bg-color;
-        @extend %p-20;
-    }
 }

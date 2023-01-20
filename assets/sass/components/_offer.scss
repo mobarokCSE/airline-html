@@ -1,58 +1,162 @@
 .offer {
 
-    &__inner {
-        @extend %p-rel;
-    }
+    &__item {
 
-    &__thumb {
-        @extend %of-hidden;
-        border-radius: 15px;
+        &-inner {
+            @extend %p-rel;
 
-        img {
-            @extend %w-100,
-            %h-100;
-            @include add-prefix(transition, $transition);
-            object-fit: cover;
+
         }
 
-        &:hover {
+        &-thumb {
+            @extend %of-hidden;
+            border-radius: 15px;
+
             img {
-                @include add-prefix(transform, scale(1.05));
+                @extend %w-100,
+                %h-100;
+                @include add-prefix(transition, $transition);
+                object-fit: cover;
             }
 
+            &:hover {
+                img {
+                    @include add-prefix(transform, scale(1.1));
+                }
+
+            }
+
+            &:after {
+                @extend %p-abs;
+                border-radius: 15px;
+                background: linear-gradient(0deg, $theme-color -4.5%, rgba(24, 90, 153, 0.9) 26.25%, rgba(251, 253, 255, 0) 102.83%);
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+
+                &.one{
+                    background: linear-gradient(0deg, $theme-color -4.5%, rgba(24, 90, 153, 0.9) 26.25%, rgba(251, 253, 255, 0) 102.83%);
+                }
+                &.two{
+                    background: linear-gradient(360deg, $theme-color 0%, rgba(45, 111, 174, 0.9) 28.89%, rgba(251, 253, 255, 0) 100%);
+
+                }
+                &.three{
+                    background: linear-gradient(359.59deg, $theme-color 1.68%, rgba(38, 102, 163, 0.77615) 23.61%, rgba(251, 253, 255, 0) 99.64%);
+
+                }
+
+                // ??? why not working one two three
+            }
         }
 
-    }
+        &-badge {
+            @extend %p-abs;
+            @extend %p-15;
+            left: 0;
+            top: 0;
 
-    &__content {
-        @extend %p-abs;
-        left: 0;
-        bottom: 0;
-        @extend %p-15;
-        color: $white-color;
+            @include breakpoint(lg) {
+                padding: 20px;
+            }
 
-        &-top{
             p{
                 @extend %mb-0;
+                color: $white-color;
+                font-weight: 300;
                 span{
                     font-size: 24px;
                     font-weight: 600;
                 }
-            }           
+            }    
+
         }
 
-        img {
-            top: 0 !important;
-        }
 
-        h6 {
+        &-content {
+            @extend %p-abs;
+            left: 0;
+            bottom: 0;
             color: $white-color;
-        }
+            @extend %p-15;
 
-        p {
-            font-size: 14px;
+            @include breakpoint(lg) {
+                padding: 20px;
+                // @extend %p-25;
+
+                //  why not use @extend value ?
+            }
+
+
+            h6 {
+                color: $white-color;
+            }
+
+            p {
+                font-size: 14px;
+                font-weight: 300;
+            }
         }
     }
+
+
+
+    // &__inner {
+    //     @extend %p-rel;
+    // }
+
+    // &__thumb {
+    //     @extend %of-hidden;
+    //     border-radius: 15px;
+
+    //     img {
+    //         @extend %w-100,
+    //         %h-100;
+    //         @include add-prefix(transition, $transition);
+    //         object-fit: cover;
+    //     }
+
+    //     &:hover {
+    //         img {
+    //             @include add-prefix(transform, scale(1.05));
+    //         }
+
+    //     }
+
+    // }
+
+    // &__content {
+    //     @extend %p-abs;
+    //     left: 0;
+    //     bottom: 0;
+    //     @extend %p-15;
+    //     color: $white-color;
+
+    //     &-top{
+    //         p{
+    //             @extend %mb-0;
+    //             span{
+    //                 font-size: 24px;
+    //                 font-weight: 600;
+    //             }
+    //         }           
+    //     }
+
+    //     img {
+    //         top: 0 !important;
+    //     }
+
+    //     h6 {
+    //         color: $white-color;
+    //     }
+
+    //     p {
+    //         font-size: 14px;
+    //     }
+    // }
 }
 
 // background: linear-gradient(360deg, #005EB8 0%, rgba(45, 111, 174, 0.9) 28.89%, rgba(251, 253, 255, 0) 100%);
+
+// filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));

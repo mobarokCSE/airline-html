@@ -840,6 +840,11 @@ a:hover {
     transform: translate3d(0, 0, 0);
   }
 }
+.badge {
+  background-color: #00A9E0;
+  padding: 0.75em 1em;
+}
+
 .section-header {
   margin-bottom: 30px;
 }
@@ -877,13 +882,13 @@ a:hover {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   position: fixed;
-  bottom: -20%;
+  bottom: 5%;
   right: 5%;
   z-index: 9;
   width: 40px;
   height: 40px;
   line-height: 40px;
-  background-color: #005EB8;
+  background-color: #F7A827;
   text-align: center;
   border-radius: 5px;
   color: #f1f2ff;
@@ -960,37 +965,37 @@ a:hover {
 }
 
 /* @@@@@@@@@@@@@  Extend Property CSS start here  @@@@@@@@@@@@@@ */
-.testimonial__wrapper {
+.social, .footer__end {
   display: flex;
   flex-wrap: wrap;
 }
 
-.package__item-inner, .offer__inner, .default-btn, .banner {
+.package__item-inner, .offer__item-inner, .default-btn, .footer__linklist-item a, .banner {
   position: relative;
 }
 
-.offer__content {
+.offer__item-content, .offer__item-badge, .offer__item-thumb:after, .footer__linklist-item a::after {
   position: absolute;
   content: "";
 }
 
-.package__item-thumb, .offer__thumb, .default-btn, .banner {
+.package__item-thumb, .offer__item-thumb, .default-btn, .banner {
   overflow: hidden;
 }
 
-.package__item-thumb img, .offer__thumb img {
+.package__item-thumb img, .offer__item-thumb img {
   width: 100%;
 }
 
-.package__item-thumb img, .offer__thumb img {
+.package__item-thumb img, .offer__item-thumb img {
   height: 100%;
 }
 
-.testimonial__wrapper {
+.footer__end {
   justify-content: space-between;
 }
 
-.default-btn {
+.default-btn, .footer__linklist-item a {
   display: inline-block;
 }
 
@@ -1010,7 +1015,7 @@ ol {
 }
 
 /* @@@@@@@@@@@@@  Extend Property Margin 10 - 30 CSS Writing Now  @@@@@@@@@@@@@@ */
-.offer__content-top p {
+.offer__item-badge p {
   margin-bottom: 0;
 }
 
@@ -1018,8 +1023,16 @@ ol {
   margin-bottom: 5px;
 }
 
-.service__item-content h4, .package__item-content h5, .package__item-content a {
+.footer__links-content img {
+  margin-bottom: 10px;
+}
+
+.service__item-content h4, .package__item-content h5, .package__item-content span, .footer__about-item {
   margin-bottom: 15px;
+}
+
+.footer__linklist-item:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .service__item-thumb img {
@@ -1030,18 +1043,35 @@ ol {
   margin-bottom: 40px;
 }
 
+.footer__end-social, .footer__end-copyright {
+  margin-top: 10px;
+}
+
+.footer__links-content {
+  margin-top: 25px;
+}
+
+.testimonial__item-content h5 {
+  margin-top: 30px;
+}
+
 .default-btn span svg,
-.default-btn span img {
+.default-btn span img, .footer__links-content img {
   margin-right: 5px;
 }
 
-/* @@@@@@@@@@@@@  Extend Property padding 10 - 30 CSS Writing Now  @@@@@@@@@@@@@@ */
-.package__item-content, .offer__content {
-  padding: 15px;
+.footer__about-item img {
+  margin-right: 10px;
 }
 
-.testimonial__detail {
-  padding: 20px;
+.footer__about p {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+/* @@@@@@@@@@@@@  Extend Property padding 10 - 30 CSS Writing Now  @@@@@@@@@@@@@@ */
+.package__item-content, .offer__item-content, .offer__item-badge {
+  padding: 15px;
 }
 
 .service__item-inner {
@@ -1080,6 +1110,72 @@ ol {
   line-height: 1.4;
 }
 
+.footer {
+  background: #005EB8;
+  color: #fff;
+  font-weight: 300;
+}
+.footer__links-tittle h6 {
+  color: #fff;
+}
+.footer__links-content .form-control {
+  padding: 0.8rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  background-color: #F9FAFB;
+}
+.footer__links-content .form-control:focus {
+  box-shadow: none;
+  border-color: #F7A827;
+}
+.footer__links button {
+  background: #F7A827;
+  color: #101828;
+  padding: 0.8rem 1.35rem;
+  border: none;
+}
+.footer__links button svg {
+  font-size: 1.25rem;
+}
+.footer__linklist-item a {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+.footer__linklist-item a::after {
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  top: 50%;
+  left: 0;
+  width: 10px;
+  height: 2px;
+  background-color: #fff;
+  opacity: 0;
+}
+.footer__linklist-item a:hover {
+  -webkit-transform: translateX(10px);
+  -moz-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  -o-transform: translateX(10px);
+  transform: translateX(10px);
+}
+.footer__linklist-item a:hover:after {
+  opacity: 1;
+  left: -12px;
+}
+.footer__end {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
 .flight article {
   background: #ccc;
   height: 200px;
@@ -1129,10 +1225,10 @@ ol {
   color: #fff;
 }
 
-.offer__thumb {
+.offer__item-thumb {
   border-radius: 15px;
 }
-.offer__thumb img {
+.offer__item-thumb img {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
@@ -1140,30 +1236,63 @@ ol {
   transition: all 0.3s ease;
   object-fit: cover;
 }
-.offer__thumb:hover img {
-  -webkit-transform: scale(1.05);
-  -moz-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  -o-transform: scale(1.05);
-  transform: scale(1.05);
+.offer__item-thumb:hover img {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
 }
-.offer__content {
+.offer__item-thumb:after {
+  border-radius: 15px;
+  background: linear-gradient(0deg, #005EB8 -4.5%, rgba(24, 90, 153, 0.9) 26.25%, rgba(251, 253, 255, 0) 102.83%);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.offer__item-thumb:after.one {
+  background: linear-gradient(0deg, #005EB8 -4.5%, rgba(24, 90, 153, 0.9) 26.25%, rgba(251, 253, 255, 0) 102.83%);
+}
+.offer__item-thumb:after.two {
+  background: linear-gradient(360deg, #005EB8 0%, rgba(45, 111, 174, 0.9) 28.89%, rgba(251, 253, 255, 0) 100%);
+}
+.offer__item-thumb:after.three {
+  background: linear-gradient(359.59deg, #005EB8 1.68%, rgba(38, 102, 163, 0.77615) 23.61%, rgba(251, 253, 255, 0) 99.64%);
+}
+.offer__item-badge {
+  left: 0;
+  top: 0;
+}
+@media (min-width: 992px) {
+  .offer__item-badge {
+    padding: 20px;
+  }
+}
+.offer__item-badge p {
+  color: #fff;
+  font-weight: 300;
+}
+.offer__item-badge p span {
+  font-size: 24px;
+  font-weight: 600;
+}
+.offer__item-content {
   left: 0;
   bottom: 0;
   color: #fff;
 }
-.offer__content-top p span {
-  font-size: 24px;
-  font-weight: 600;
+@media (min-width: 992px) {
+  .offer__item-content {
+    padding: 20px;
+  }
 }
-.offer__content img {
-  top: 0 !important;
-}
-.offer__content h6 {
+.offer__item-content h6 {
   color: #fff;
 }
-.offer__content p {
+.offer__item-content p {
   font-size: 14px;
+  font-weight: 300;
 }
 
 .package__item-thumb {
@@ -1184,6 +1313,7 @@ ol {
   transform: scale(1.05);
 }
 .package__item-content {
+  background-color: #fff;
   border: 1px solid #EAECF0;
   border-top: none;
   border-radius: 0 0 15px 15px;
@@ -1204,8 +1334,64 @@ ol {
   padding-block: 100px;
 }
 
-.testimonial__detail {
+.social {
+  gap: 15px;
+}
+.social__link {
+  color: #fff;
+  font-size: 22px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.social__link:hover {
+  color: #F7A827;
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  -o-transform: translateY(10px);
+  transform: translateY(10px);
+}
+
+@media (min-width: 768px) {
+  .testimonial__item-inner {
+    display: flex;
+  }
+}
+@media (min-width: 992px) {
+  .testimonial__item-inner {
+    display: flex;
+  }
+}
+@media (max-width: 575px) {
+  .testimonial__item-thumb img {
+    border-radius: 15px;
+  }
+}
+.testimonial__item-content {
   background-color: #F9FAFB;
+  border-radius: 0px 15px 15px 0px;
+  padding: 20px 15px;
+}
+@media (min-width: 768px) {
+  .testimonial__item-content {
+    padding: 20px 60px;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .testimonial__item-content {
+    width: 60%;
+    padding: 50px 40px 50px 90px;
+  }
+  .testimonial__item-content p {
+    font-size: 24px;
+    font-weight: 500;
+    color: #101828;
+    margin-bottom: 3rem;
+  }
 }
 
 .service__item-inner {

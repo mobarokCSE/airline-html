@@ -1,3 +1,8 @@
+.badge{
+    background-color: $primary-color;
+        padding: 0.75em 1em;
+}
+
 
 
 // Section header start here
@@ -42,13 +47,14 @@
 .scrollToTop {
     @include add-prefix(transition, $transition);
     position: fixed;
-    bottom: -20%;
+    // bottom: -20%;
+    bottom: 5%;
     right: 5%;
     z-index: 9;
     width: 40px;
     height: 40px;
     line-height: 40px;
-    background-color: $theme-color;
+    background-color: $secondary-color;
     text-align: center;
     border-radius: 5px;
     color: $body-color;

@@ -3,7 +3,7 @@
 
   //   offer slider
   const swiper = new Swiper('.offer__slider', {
-      // spaceBetween: 24,
+      spaceBetween: 24,
       grabCursor: true,
       loop: true,
       slidesPerView: 1,
@@ -13,7 +13,6 @@
           },
           992: {
               slidesPerView: 3,
-              spaceBetween: 15,
           },
           1200: {
               slidesPerView: 3,
@@ -28,7 +27,7 @@
 
   //   package slider
   const swiperPackage = new Swiper('.package__slider', {
-      // spaceBetween: 24,
+      spaceBetween: 24,
       grabCursor: true,
       loop: true,
       slidesPerView: 1,
@@ -38,7 +37,6 @@
           },
           992: {
               slidesPerView: 3,
-              spaceBetween: 15,
           },
           1200: {
               slidesPerView: 3,
@@ -53,17 +51,16 @@
 
   //   partner slider
   const swiperPartner = new Swiper('.partner__slider', {
-      // spaceBetween: 24,
+      spaceBetween: 24,
       grabCursor: true,
       loop: true,
-      slidesPerView: 6,
+      slidesPerView: 2,
       breakpoints: {
           576: {
-              slidesPerView: 2,
+              slidesPerView: 3,
           },
           992: {
               slidesPerView: 4,
-              spaceBetween: 15,
           },
           1200: {
               slidesPerView: 6,
@@ -78,41 +75,43 @@
   });
 
 
-//   testimonial slider
-// ***** testimonial thumb slider
-  const testimonialThumb = new Swiper('.testimonial__thumb', {
+  //   testimonial slider
+  const testimonial = new Swiper('.testimonial__slider', {
       grabCursor: true,
+      spaceBetween: 24,
       slidesPerView: 1,
       loop: true,
-    //   autoplay: {
-    //       delay: 1,
-    //       disableOnInteraction: true
-    //   },
+      //   autoplay: {
+      //       delay: 1,
+      //       disableOnInteraction: true
+      //   },
       speed: 5000,
 
   });
 
-  //   testimonial slider
-  // ***** testimonial detail slider
 
-    const testimonialDtail = new Swiper('.testimonial__detail', {
-        grabCursor: true,
-        slidesPerView: 1,
-        loop: true,
-        //   autoplay: {
-        //       delay: 1,
-        //       disableOnInteraction: true
-        //   },
 
-        	// direction: 'vertical',
-        	//     pagination: {
-        	//         clickable: true,
-        	//         el: '.swiper-pagination',
-        	//         type: 'bullets',
-        	//     },
-        speed: 5000,
-        thumbs: {
-            swiper: testimonialThumb
-        }
-
-    });
+  //============ Scroll to top js =========
+  //Check to see if the window is top if not then display button
+  $(window).scroll(function () {
+      if ($(this).scrollTop() > 300) {
+          $('.scrollToTop').css({
+              'bottom': '7%',
+              'opacity': '1',
+              'transition': 'all .5s ease'
+          });
+      } else {
+          $('.scrollToTop').css({
+              'bottom': '-30%',
+              'opacity': '0',
+              'transition': 'all .5s ease'
+          })
+      }
+  });
+  //Click event to scroll to top
+  $('.scrollToTop').click(function () {
+      $('html, body').animate({
+          scrollTop: 0
+      }, 500);
+      return false;
+  });
