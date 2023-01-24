@@ -4,16 +4,20 @@
     font-weight: 300;
 
     &__about {
-        p {
+        &-moto {
             @extend %my-25;
         }
 
         &-item {
-            @extend %mb-15;
+            @extend %mb-20;
 
             img {
                 @extend %mr-10;
             }
+        }
+        &-location{
+            display: flex;
+            align-items: flex-start;
         }
     }
 
@@ -47,8 +51,8 @@
         }
         button {
                 background: $secondary-color;
-                color: $black-color;
-                padding: 0.8rem 1.35rem;
+                color: $white-color;
+                padding: 0.8rem 1.25rem;
                 border: none;
 
 

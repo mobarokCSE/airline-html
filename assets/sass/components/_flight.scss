@@ -1,6 +1,128 @@
 .flight {
-    article {
-        background: #ccc;
-        height: 200px;
+    &__header {
+        @extend %pt-25,
+        %pl-25,
+        %flex;
+        background-color: $theme-color;
+        color: $white-color;
+        width: 240px;
+        border-radius: 25px 99px 0px 0px;
+
+        &-text {
+            @extend %ml-15;
+            font-weight: 700;
+            font-family: $title-font;
+            font-size: 20px;
+
+            p {
+                @extend %mb-0;
+            }
+
+        }
+
     }
+
+    &__choose {
+
+        background-color: $theme-color;
+        color: $white-color;
+        border-radius: 0px 25px 25px 25px;
+        padding: 25px 25px 55px 25px;
+
+
+        .round-btn {
+
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid $white-color;
+            background-color: rgba($color: $white-color, $alpha: .10);
+            @extend %mr-15,
+            %p-rel;
+            display: inline-block;
+
+            &::after {
+                content: "";
+                width: 10px;
+                height: 10px;
+                background-color: transparent;
+                @extend %p-abs;
+                border-radius: 50%;
+                left: 50%;
+                top: 50%;
+                @include add-prefix(transform, translate(-50%, -50%));
+            }
+        }
+
+        .nav-link {
+            color: $white-color;
+            padding-inline: 0;
+            @extend %mr-25;
+            display: inline-flex;
+            align-items: center;
+
+            &.active {
+                background: transparent;
+
+                .round-btn {
+                    &::after {
+                        background-color: $secondary-color;
+                    }
+                }
+            }
+        }
+    }
+
+
+    &__item {
+        &-inner {
+            border: 1px solid;
+            // margin: 10px;
+            padding: 10px;
+            border-radius: 15px;
+
+            h4 {
+                color: $white-color;
+            }
+        }
+
+    }
+
 }
+
+
+
+
+
+// &__choose {
+//     &-inner {
+//         background-color: $theme-color;
+//         color: $white-color;
+//         border-radius: 15px;
+//         padding: 20px;
+
+//     }
+// }
+
+// &__oneway {
+//     &-inner {
+//         // @extend %flex;
+//         display: grid;
+//         grid-template-columns: 1fr 1fr 1fr 1fr;
+//     }
+// }
+
+// &__item {
+//     border: 1px solid;
+//     margin: 10px;
+//     padding: 10px;
+//     border-radius: 15px;
+
+//     h4 {
+//         color: $white-color;
+//     }
+// }
+
+// article {
+//     height: 200px;
+// }

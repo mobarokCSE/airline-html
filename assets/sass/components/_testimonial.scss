@@ -1,6 +1,8 @@
 .testimonial {
     &__item {
         &-inner {
+            background-color: $bg-color;
+            border-radius: 15px;
 
             @include breakpoint(md) {
                 display: flex;
@@ -12,19 +14,21 @@
         }
 
         &-thumb {
+            background-color: #E6E6E4;
+            border-radius: 15px 15px 0px 0px;
 
+            @include breakpoint(md) {
+                border-radius: 15px 0px 0px 15px;
 
-            @include breakpoint(max-sm) {
-                img {
-                    border-radius: 15px;
-                }
+            }
+            @include breakpoint(lg) {
+                border-radius: 15px 0px 0px 15px;
 
             }
         }
 
         &-content {
-            background-color: $bg-color;
-            border-radius: 0px 15px 15px 0px;
+            
             padding: 20px 15px;
 
             h5{
@@ -39,7 +43,7 @@
 
             @include breakpoint(lg) {
                 width: 60%;
-                padding: 50px 40px 50px 90px;
+                padding: 100px 40px 50px 90px;
 
                 p {
                     font-size: 24px;

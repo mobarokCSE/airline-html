@@ -1,0 +1,163 @@
+.account {
+    @extend %of-hidden;
+
+
+    &__content {
+        max-inline-size: 535px;
+        margin-inline: auto;
+        @extend %p-10;
+    }
+
+    &__header {
+        @extend %text-center;
+
+        h4 {
+            @extend %mb-20;
+        }
+
+        p {
+            @include font-size(14px);
+            font-weight: 600;
+            @extend %mb-40;
+        }
+    }
+
+    &__form {
+        .form-label {
+            @extend %mb-5;
+            // @include font-size(16px);
+            font-weight: 500;
+            color: $theme-color;
+        }
+
+        .input-group {
+            @include add-prefix(transition, $transition);
+            border: 1px solid rgba($theme-color, $alpha:.3);
+            border-radius: .5rem;
+
+            // &-icon {
+            //     display: inline-grid;
+            //     place-items: center;
+            //     padding-inline: 1rem;
+            // }
+
+            &:focus-within {
+                border-color: $theme-color;
+            }
+
+            .valid-tooltip,
+            .invalid-tooltip {
+                background-color: transparent;
+                top: 90%;
+            }
+
+            .valid-tooltip {
+                color: $success-color;
+            }
+
+            .invalid-tooltip {
+                color: $danger-color;
+            }
+        }
+
+        .form-control {
+            border: none;
+            border-radius: .45rem !important;
+
+            &:focus {
+                box-shadow: none !important;
+            }
+        }
+
+        .showhide-pass {
+            position: relative;
+        }
+
+        .toggle {
+            background: none;
+            border: none;
+            color: #7a7b7c;
+            font-weight: 600;
+            position: absolute;
+            right: .75em;
+            top: 1em;
+            z-index: 9;
+        }
+
+        &-passcheck {
+            @extend %flex,
+            %align-items-center,
+            %justify-between,
+            %mb-35,
+            %mt-35;
+            gap: 10px;
+            
+
+            a{
+                color: $theme-color;
+            }
+
+        }
+
+
+
+        .default-btn {
+            @extend %w-100;
+        }
+
+        &-forgotpass {
+            a {
+                color: $theme-color;
+                font-weight: 600;
+            }
+        }
+
+
+    }
+
+    &__social {
+        @extend %mt-20;
+
+        &-btn {
+            @include add-prefix(transition, $transition);
+            @extend %w-100,
+            %justify-center;
+            display: inline-flex;
+            background-color: $white-color;
+            padding: .7rem 2.25rem;
+            border: 1px solid rgba($theme-color, $alpha:.3);
+            border-radius: .5rem;
+            font-weight: 600;
+
+            @include breakpoint(xl) {
+                padding: 0.8rem 2.25rem;
+            }
+
+            span {
+                @extend %mr-10,
+                %d-inline-block;
+            }
+
+            &:hover {
+                border-color: $theme-color;
+            }
+        }
+    }
+
+    //toggle between signin and signup page
+    &__switch {
+        @extend %text-center,
+        %mt-30;
+
+        p {
+            @extend %mb-0;
+        }
+
+        a {
+            @extend %ml-5,
+            %d-inline-block;
+            color: $theme-color;
+            font-weight: 600;
+        }
+    }
+}

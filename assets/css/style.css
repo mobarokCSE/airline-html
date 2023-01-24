@@ -353,7 +353,7 @@ body {
   color: #475467;
   font-size: 1rem;
   line-height: 1.5;
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 body ::selection {
   background: rgba(0, 94, 184, 0.8);
@@ -843,6 +843,7 @@ a:hover {
 .badge {
   background-color: #00A9E0;
   padding: 0.75em 1em;
+  border-radius: 99px;
 }
 
 .section-header {
@@ -857,7 +858,12 @@ a:hover {
 .form-control {
   background-color: transparent;
   border-color: rgba(0, 94, 184, 0.2);
-  padding: 1rem 1.5rem;
+  padding: 0.7rem 1.5rem;
+}
+@media (min-width: 1200px) {
+  .form-control {
+    padding: 0.8rem 1.25rem;
+  }
 }
 .form-control:focus {
   box-shadow: none;
@@ -965,25 +971,25 @@ a:hover {
 }
 
 /* @@@@@@@@@@@@@  Extend Property CSS start here  @@@@@@@@@@@@@@ */
-.social, .footer__end {
+.social, .flight__header, .footer__end, .account__form-passcheck {
   display: flex;
   flex-wrap: wrap;
 }
 
-.package__item-inner, .offer__item-inner, .default-btn, .footer__linklist-item a, .banner {
+.package__item-inner, .offer__item-inner, .default-btn, .flight__choose .round-btn, .footer__linklist-item a, .banner {
   position: relative;
 }
 
-.offer__item-content, .offer__item-badge, .offer__item-thumb:after, .footer__linklist-item a::after {
+.offer__item-content, .offer__item-badge, .offer__item-thumb:after, .flight__choose .round-btn::after, .footer__linklist-item a::after {
   position: absolute;
   content: "";
 }
 
-.package__item-thumb, .offer__item-thumb, .default-btn, .banner {
+.package__item-thumb, .offer__item-thumb, .default-btn, .account, .banner {
   overflow: hidden;
 }
 
-.package__item-thumb img, .offer__item-thumb img {
+.package__item-thumb img, .offer__item-thumb img, .account__social-btn, .account__form .default-btn {
   width: 100%;
 }
 
@@ -991,11 +997,19 @@ a:hover {
   height: 100%;
 }
 
-.footer__end {
+.account__social-btn {
+  justify-content: center;
+}
+
+.footer__end, .account__form-passcheck {
   justify-content: space-between;
 }
 
-.default-btn, .footer__linklist-item a {
+.account__form-passcheck {
+  align-items: center;
+}
+
+.default-btn, .footer__linklist-item a, .account__switch a, .account__social-btn span {
   display: inline-block;
 }
 
@@ -1005,7 +1019,7 @@ a:hover {
 
 /* @@@@@@@@@@@@@  Extend Property CSS Writing Now  @@@@@@@@@@@@@@ */
 /* @@@@@@@@@@@@@  Extend Property CSS Writing Now  @@@@@@@@@@@@@@ */
-.default-btn {
+.default-btn, .account__switch, .account__header, .banner__thumb, .banner__content h1 {
   text-align: center;
 }
 
@@ -1015,11 +1029,11 @@ ol {
 }
 
 /* @@@@@@@@@@@@@  Extend Property Margin 10 - 30 CSS Writing Now  @@@@@@@@@@@@@@ */
-.offer__item-badge p {
+.offer__item-badge p, .flight__header-text p, .account__switch p {
   margin-bottom: 0;
 }
 
-.subtittle {
+.account__form .form-label, .subtittle {
   margin-bottom: 5px;
 }
 
@@ -1027,11 +1041,11 @@ ol {
   margin-bottom: 10px;
 }
 
-.service__item-content h4, .package__item-content h5, .package__item-content span, .footer__about-item {
+.service__item-content h4, .package__item-content h5, .package__item-content span {
   margin-bottom: 15px;
 }
 
-.footer__linklist-item:not(:last-child) {
+.footer__linklist-item:not(:last-child), .footer__about-item, .account__header h4 {
   margin-bottom: 20px;
 }
 
@@ -1039,7 +1053,11 @@ ol {
   margin-bottom: 30px;
 }
 
-.mb-40 {
+.account__form-passcheck {
+  margin-bottom: 35px;
+}
+
+.account__header p, .mb-40 {
   margin-bottom: 40px;
 }
 
@@ -1047,12 +1065,28 @@ ol {
   margin-top: 10px;
 }
 
+.account__social {
+  margin-top: 20px;
+}
+
 .footer__links-content {
   margin-top: 25px;
 }
 
-.testimonial__item-content h5 {
+.testimonial__item-content h5, .account__switch {
   margin-top: 30px;
+}
+
+.account__form-passcheck {
+  margin-top: 35px;
+}
+
+.account__switch a {
+  margin-left: 5px;
+}
+
+.flight__header-text {
+  margin-left: 15px;
 }
 
 .default-btn span svg,
@@ -1060,16 +1094,28 @@ ol {
   margin-right: 5px;
 }
 
-.footer__about-item img {
+.footer__about-item img, .account__social-btn span {
   margin-right: 10px;
 }
 
-.footer__about p {
+.flight__choose .round-btn {
+  margin-right: 15px;
+}
+
+.flight__choose .nav-link {
+  margin-right: 25px;
+}
+
+.footer__about-moto {
   margin-top: 25px;
   margin-bottom: 25px;
 }
 
 /* @@@@@@@@@@@@@  Extend Property padding 10 - 30 CSS Writing Now  @@@@@@@@@@@@@@ */
+.account__content {
+  padding: 10px;
+}
+
 .package__item-content, .offer__item-content, .offer__item-badge {
   padding: 15px;
 }
@@ -1078,18 +1124,24 @@ ol {
   padding: 25px;
 }
 
+.flight__header {
+  padding-top: 25px;
+}
+
 ul,
 ol {
   padding-left: 0;
 }
 
+.flight__header {
+  padding-left: 25px;
+}
+
 .banner {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-color: #F1F8FF;
   padding-block: 120px;
 }
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   .banner {
     padding-block: 150px;
   }
@@ -1105,15 +1157,120 @@ ol {
   }
 }
 .banner__content h1 {
-  color: #fff;
-  max-inline-size: 22ch;
+  color: #005EB8;
   line-height: 1.4;
+}
+@media (min-width: 992px) {
+  .banner__content h1 {
+    text-align: left;
+    max-inline-size: 22ch;
+  }
+}
+@media (min-width: 992px) {
+  .banner__thumb {
+    text-align: right;
+  }
+}
+
+.account__content {
+  max-inline-size: 535px;
+  margin-inline: auto;
+}
+.account__header p {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.account__form .form-label {
+  font-weight: 500;
+  color: #005EB8;
+}
+.account__form .input-group {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 94, 184, 0.3);
+  border-radius: 0.5rem;
+}
+.account__form .input-group:focus-within {
+  border-color: #005EB8;
+}
+.account__form .input-group .valid-tooltip,
+.account__form .input-group .invalid-tooltip {
+  background-color: transparent;
+  top: 90%;
+}
+.account__form .input-group .valid-tooltip {
+  color: #00b460;
+}
+.account__form .input-group .invalid-tooltip {
+  color: #dc3545;
+}
+.account__form .form-control {
+  border: none;
+  border-radius: 0.45rem !important;
+}
+.account__form .form-control:focus {
+  box-shadow: none !important;
+}
+.account__form .showhide-pass {
+  position: relative;
+}
+.account__form .toggle {
+  background: none;
+  border: none;
+  color: #7a7b7c;
+  font-weight: 600;
+  position: absolute;
+  right: 0.75em;
+  top: 1em;
+  z-index: 9;
+}
+.account__form-passcheck {
+  gap: 10px;
+}
+.account__form-passcheck a {
+  color: #005EB8;
+}
+.account__form-forgotpass a {
+  color: #005EB8;
+  font-weight: 600;
+}
+.account__social-btn {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  background-color: #fff;
+  padding: 0.7rem 2.25rem;
+  border: 1px solid rgba(0, 94, 184, 0.3);
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
+@media (min-width: 1200px) {
+  .account__social-btn {
+    padding: 0.8rem 2.25rem;
+  }
+}
+.account__social-btn:hover {
+  border-color: #005EB8;
+}
+.account__switch a {
+  color: #005EB8;
+  font-weight: 600;
 }
 
 .footer {
   background: #005EB8;
   color: #fff;
   font-weight: 300;
+}
+.footer__about-location {
+  display: flex;
+  align-items: flex-start;
 }
 .footer__links-tittle h6 {
   color: #fff;
@@ -1129,8 +1286,8 @@ ol {
 }
 .footer__links button {
   background: #F7A827;
-  color: #101828;
-  padding: 0.8rem 1.35rem;
+  color: #fff;
+  padding: 0.8rem 1.25rem;
   border: none;
 }
 .footer__links button svg {
@@ -1176,15 +1333,70 @@ ol {
 .footer__end {
   border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
-.flight article {
-  background: #ccc;
-  height: 200px;
+.flight__header {
+  background-color: #005EB8;
+  color: #fff;
+  width: 240px;
+  border-radius: 25px 99px 0px 0px;
+}
+.flight__header-text {
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+}
+.flight__choose {
+  background-color: #005EB8;
+  color: #fff;
+  border-radius: 0px 25px 25px 25px;
+  padding: 25px 25px 55px 25px;
+}
+.flight__choose .round-btn {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: inline-block;
+}
+.flight__choose .round-btn::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.flight__choose .nav-link {
+  color: #fff;
+  padding-inline: 0;
+  display: inline-flex;
+  align-items: center;
+}
+.flight__choose .nav-link.active {
+  background: transparent;
+}
+.flight__choose .nav-link.active .round-btn::after {
+  background-color: #F7A827;
+}
+.flight__item-inner {
+  border: 1px solid;
+  padding: 10px;
+  border-radius: 15px;
+}
+.flight__item-inner h4 {
+  color: #fff;
 }
 
 .default-btn {
   font-size: 0.875rem;
   text-decoration: none;
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #fff;
   padding: 0.7rem 1.5rem;
   transition: all 0.3s ease;
@@ -1195,7 +1407,7 @@ ol {
 }
 @media (min-width: 1200px) {
   .default-btn {
-    padding: 0.7rem 2.25rem;
+    padding: 0.8rem 2.25rem;
   }
 }
 .default-btn span {
@@ -1245,20 +1457,11 @@ ol {
 }
 .offer__item-thumb:after {
   border-radius: 15px;
-  background: linear-gradient(0deg, #005EB8 -4.5%, rgba(24, 90, 153, 0.9) 26.25%, rgba(251, 253, 255, 0) 102.83%);
+  background: rgba(87, 119, 149, 0.32);
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
-}
-.offer__item-thumb:after.one {
-  background: linear-gradient(0deg, #005EB8 -4.5%, rgba(24, 90, 153, 0.9) 26.25%, rgba(251, 253, 255, 0) 102.83%);
-}
-.offer__item-thumb:after.two {
-  background: linear-gradient(360deg, #005EB8 0%, rgba(45, 111, 174, 0.9) 28.89%, rgba(251, 253, 255, 0) 100%);
-}
-.offer__item-thumb:after.three {
-  background: linear-gradient(359.59deg, #005EB8 1.68%, rgba(38, 102, 163, 0.77615) 23.61%, rgba(251, 253, 255, 0) 99.64%);
 }
 .offer__item-badge {
   left: 0;
@@ -1355,6 +1558,10 @@ ol {
   transform: translateY(10px);
 }
 
+.testimonial__item-inner {
+  background-color: #F9FAFB;
+  border-radius: 15px;
+}
 @media (min-width: 768px) {
   .testimonial__item-inner {
     display: flex;
@@ -1365,14 +1572,21 @@ ol {
     display: flex;
   }
 }
-@media (max-width: 575px) {
-  .testimonial__item-thumb img {
-    border-radius: 15px;
+.testimonial__item-thumb {
+  background-color: #E6E6E4;
+  border-radius: 15px 15px 0px 0px;
+}
+@media (min-width: 768px) {
+  .testimonial__item-thumb {
+    border-radius: 15px 0px 0px 15px;
+  }
+}
+@media (min-width: 992px) {
+  .testimonial__item-thumb {
+    border-radius: 15px 0px 0px 15px;
   }
 }
 .testimonial__item-content {
-  background-color: #F9FAFB;
-  border-radius: 0px 15px 15px 0px;
   padding: 20px 15px;
 }
 @media (min-width: 768px) {
@@ -1384,7 +1598,7 @@ ol {
 @media (min-width: 992px) {
   .testimonial__item-content {
     width: 60%;
-    padding: 50px 40px 50px 90px;
+    padding: 100px 40px 50px 90px;
   }
   .testimonial__item-content p {
     font-size: 24px;

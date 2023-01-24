@@ -1,10 +1,10 @@
 .banner {
-    @extend %of-hidden;
-    @extend %p-rel;
-    @include background-cover;
+    @extend %of-hidden,
+    %p-rel;
+    background-color: $banner-color;
     padding-block: 120px;
 
-    @include breakpoint(md) {
+    @include breakpoint(sm) {
         padding-block: 150px;
     }
 
@@ -16,17 +16,27 @@
         padding-block: 320px;
     }
 
-
     &__content {
 
         h1 {
-            color: $white-color;
-            max-inline-size: 22ch;
+            color: $theme-color;
             line-height: 1.4;
+            @extend %text-center;
+
+            @include breakpoint(lg) {
+                text-align: left;
+                max-inline-size: 22ch;
+            }
+
         }
     }
+
+    &__thumb {
+        @extend %text-center;
+
+        @include breakpoint(lg) {
+            text-align: right;
+        }
+
+    }
 }
-
-
-
-

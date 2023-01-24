@@ -29,25 +29,12 @@
             &:after {
                 @extend %p-abs;
                 border-radius: 15px;
-                background: linear-gradient(0deg, $theme-color -4.5%, rgba(24, 90, 153, 0.9) 26.25%, rgba(251, 253, 255, 0) 102.83%);
+                // background: linear-gradient(0deg, $theme-color -4.5%, rgba(24, 90, 153, 0.9) 26.25%, rgba(251, 253, 255, 0) 102.83%);
+                background: rgb(87 119 149 / 32%);
                 left: 0;
                 right: 0;
                 top: 0;
                 bottom: 0;
-
-                &.one{
-                    background: linear-gradient(0deg, $theme-color -4.5%, rgba(24, 90, 153, 0.9) 26.25%, rgba(251, 253, 255, 0) 102.83%);
-                }
-                &.two{
-                    background: linear-gradient(360deg, $theme-color 0%, rgba(45, 111, 174, 0.9) 28.89%, rgba(251, 253, 255, 0) 100%);
-
-                }
-                &.three{
-                    background: linear-gradient(359.59deg, $theme-color 1.68%, rgba(38, 102, 163, 0.77615) 23.61%, rgba(251, 253, 255, 0) 99.64%);
-
-                }
-
-                // ??? why not working one two three
             }
         }
 

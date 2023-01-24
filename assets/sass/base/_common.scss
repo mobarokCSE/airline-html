@@ -1,6 +1,7 @@
-.badge{
+.badge {
     background-color: $primary-color;
-        padding: 0.75em 1em;
+    padding: 0.75em 1em;
+    border-radius: 99px;
 }
 
 
@@ -20,7 +21,11 @@
 .form-control {
     background-color: transparent;
     border-color: rgba($theme-color, $alpha: 0.20);
-    padding: 1rem 1.5rem;
+    padding: .7rem 1.5rem;
+
+    @include breakpoint(xl) {
+        padding: 0.8rem 1.25rem;
+    }
 
     &:focus {
         box-shadow: none;
@@ -30,14 +35,16 @@
 
 .form-check {
     &-input {
-        &:focus{
+        &:focus {
             box-shadow: none;
         }
+
         &:checked {
             background-color: $theme-color;
             border-color: $theme-color;
         }
     }
+
     &-label {
         color: $text-color !important
     }
@@ -65,4 +72,4 @@
     }
 
 
-} 
+}
