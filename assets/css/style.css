@@ -1019,7 +1019,7 @@ a:hover {
 
 /* @@@@@@@@@@@@@  Extend Property CSS Writing Now  @@@@@@@@@@@@@@ */
 /* @@@@@@@@@@@@@  Extend Property CSS Writing Now  @@@@@@@@@@@@@@ */
-.default-btn, .account__switch, .account__header, .banner__thumb, .banner__content h1 {
+.default-btn, .flight__search-inner, .account__switch, .account__header, .banner__thumb, .banner__content h1 {
   text-align: center;
 }
 
@@ -1120,6 +1120,10 @@ ol {
   padding: 15px;
 }
 
+.flight__date-return, .flight__date-journey, .flight__item-inner {
+  padding: 20px;
+}
+
 .service__item-inner {
   padding: 25px;
 }
@@ -1135,6 +1139,14 @@ ol {
 
 .flight__header {
   padding-left: 25px;
+}
+
+.flight__item-inner small {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .banner {
@@ -1385,12 +1397,30 @@ ol {
   background-color: #F7A827;
 }
 .flight__item-inner {
-  border: 1px solid;
-  padding: 10px;
+  border: 1px solid #fff;
   border-radius: 15px;
+}
+.flight__item-inner.journey-date {
+  padding: 0;
 }
 .flight__item-inner h4 {
   color: #fff;
+}
+.flight__item-inner h4 span {
+  font-size: 16px;
+  font-weight: 500;
+}
+.flight__date-journey {
+  border-right: 1px solid #fff;
+}
+.flight__search-inner a {
+  background-color: #F7A827;
+  margin-top: -25px;
+  color: #101828;
+}
+.flight__search-inner a:hover {
+  background-color: #F7A827;
+  color: #101828;
 }
 
 .default-btn {

@@ -76,53 +76,60 @@
 
     &__item {
         &-inner {
-            border: 1px solid;
-            // margin: 10px;
-            padding: 10px;
+            border: 1px solid $white-color;
+            @extend %p-20;
             border-radius: 15px;
+
+            &.journey-date {
+                padding: 0;
+            }
 
             h4 {
                 color: $white-color;
+
+                span {
+                    font-size: 16px;
+                    font-weight: 500;
+                }
             }
+
+            small {
+                @extend %text-1;
+            }
+
+
+
         }
 
     }
 
+    &__date {
+        &-journey {
+            @extend %p-20;
+            border-right: 1px solid $white-color;
+        }
+
+        &-return {
+            @extend %p-20;
+        }
+    }
+
+
+    &__search {
+        &-inner {
+            @extend %text-center;
+
+            a {
+                background-color: $secondary-color;
+                margin-top: -25px;
+                color: $title-color;
+
+                &:hover {
+                    background-color: $secondary-color;
+                    color: $title-color;
+                }
+            }
+        }
+    }
+
 }
-
-
-
-
-
-// &__choose {
-//     &-inner {
-//         background-color: $theme-color;
-//         color: $white-color;
-//         border-radius: 15px;
-//         padding: 20px;
-
-//     }
-// }
-
-// &__oneway {
-//     &-inner {
-//         // @extend %flex;
-//         display: grid;
-//         grid-template-columns: 1fr 1fr 1fr 1fr;
-//     }
-// }
-
-// &__item {
-//     border: 1px solid;
-//     margin: 10px;
-//     padding: 10px;
-//     border-radius: 15px;
-
-//     h4 {
-//         color: $white-color;
-//     }
-// }
-
-// article {
-//     height: 200px;
-// }
