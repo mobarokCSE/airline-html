@@ -971,16 +971,16 @@ a:hover {
 }
 
 /* @@@@@@@@@@@@@  Extend Property CSS start here  @@@@@@@@@@@@@@ */
-.social, .flight__header, .footer__end, .account__form-passcheck {
+.social, .result__time-inner, .result__flight-inner, .result__totalflight-inner, .result__top-inner, .flight__header, .footer__end, .account__form-passcheck {
   display: flex;
   flex-wrap: wrap;
 }
 
-.package__item-inner, .offer__item-inner, .default-btn, .flight__choose .round-btn, .footer__linklist-item a, .banner {
+.package__item-inner, .offer__item-inner, .default-btn, .flight__item, .flight__choose .round-btn, .footer__linklist-item a, .banner {
   position: relative;
 }
 
-.offer__item-content, .offer__item-badge, .offer__item-thumb:after, .flight__choose .round-btn::after, .footer__linklist-item a::after {
+.offer__item-content, .offer__item-badge, .offer__item-thumb:after, .flight__item > span, .flight__choose .round-btn::after, .footer__linklist-item a::after {
   position: absolute;
   content: "";
 }
@@ -997,15 +997,15 @@ a:hover {
   height: 100%;
 }
 
-.account__social-btn {
+.result__time-inner, .account__social-btn {
   justify-content: center;
 }
 
-.footer__end, .account__form-passcheck {
+.result__top-inner, .footer__end, .account__form-passcheck {
   justify-content: space-between;
 }
 
-.account__form-passcheck {
+.result__time-inner, .result__flight-inner, .result__totalflight-inner, .result__top-inner, .account__form-passcheck {
   align-items: center;
 }
 
@@ -1013,13 +1013,18 @@ a:hover {
   display: inline-block;
 }
 
-.service__item-inner, .default-btn {
+.service__item-inner, .result__item-inner, .result__time-inner .minute p,
+.result__time-inner .second p, .result__flight-inner, .default-btn {
   border-radius: 8px;
+}
+
+.result__left-inner, .result__top-inner {
+  border-radius: 15px;
 }
 
 /* @@@@@@@@@@@@@  Extend Property CSS Writing Now  @@@@@@@@@@@@@@ */
 /* @@@@@@@@@@@@@  Extend Property CSS Writing Now  @@@@@@@@@@@@@@ */
-.default-btn, .flight__search-inner, .account__switch, .account__header, .banner__thumb, .banner__content h1 {
+.result__item-inner, .default-btn, .flight__search-inner, .account__switch, .account__header, .banner__thumb, .banner__content h1 {
   text-align: center;
 }
 
@@ -1037,7 +1042,7 @@ ol {
   margin-bottom: 5px;
 }
 
-.footer__links-content img {
+.result__item-inner img, .footer__links-content img {
   margin-bottom: 10px;
 }
 
@@ -1047,6 +1052,10 @@ ol {
 
 .footer__linklist-item:not(:last-child), .footer__about-item, .account__header h4 {
   margin-bottom: 20px;
+}
+
+.result__top-inner {
+  margin-bottom: 25px;
 }
 
 .service__item-thumb img {
@@ -1069,7 +1078,7 @@ ol {
   margin-top: 20px;
 }
 
-.footer__links-content {
+.result__item-inner, .footer__links-content {
   margin-top: 25px;
 }
 
@@ -1081,8 +1090,13 @@ ol {
   margin-top: 35px;
 }
 
-.account__switch a {
+.result__sortby-inner i, .account__switch a {
   margin-left: 5px;
+}
+
+.result__time-inner .minute small,
+.result__time-inner .second small {
+  margin-left: 10px;
 }
 
 .flight__header-text {
@@ -1106,13 +1120,14 @@ ol {
   margin-right: 25px;
 }
 
-.footer__about-moto {
+.result__refoundable-inner .checkair, .result__filterairline-inner .checkair, .footer__about-moto {
   margin-top: 25px;
   margin-bottom: 25px;
 }
 
 /* @@@@@@@@@@@@@  Extend Property padding 10 - 30 CSS Writing Now  @@@@@@@@@@@@@@ */
-.account__content {
+.result__time-inner .minute p,
+.result__time-inner .second p, .account__content {
   padding: 10px;
 }
 
@@ -1128,7 +1143,15 @@ ol {
   padding: 25px;
 }
 
-.flight__header {
+.result__time-inner {
+  padding-bottom: 25px;
+}
+
+.result__refoundable-inner, .result__departure-inner, .result__filterprice-inner, .result__filterairline-inner {
+  padding-bottom: 35px;
+}
+
+.result__refoundable-inner h6, .result__departure-inner h6, .result__filterprice-inner h6, .result__filterairline-inner h6, .flight__header {
   padding-top: 25px;
 }
 
@@ -1139,6 +1162,26 @@ ol {
 
 .flight__header {
   padding-left: 25px;
+}
+
+.result__item-inner, .result__flight-inner {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.result__left-inner {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.result__item-inner {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.result__left-inner, .result__flight-inner {
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .flight__item-inner small {
@@ -1396,9 +1439,26 @@ ol {
 .flight__choose .nav-link.active .round-btn::after {
   background-color: #F7A827;
 }
+.flight__item > span {
+  width: 40px;
+  height: 40px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: red;
+  display: grid;
+  place-items: center;
+  right: -30px;
+  top: 50%;
+  z-index: 1;
+}
 .flight__item-inner {
   border: 1px solid #fff;
   border-radius: 15px;
+  cursor: pointer;
 }
 .flight__item-inner.journey-date {
   padding: 0;
@@ -1431,7 +1491,6 @@ ol {
   padding: 0.7rem 1.5rem;
   transition: all 0.3s ease;
   background: #005EB8;
-  text-transform: capitalize;
   font-weight: 600;
   border: 2px solid transparent;
 }
@@ -1565,6 +1624,75 @@ ol {
 
 .partner {
   padding-block: 100px;
+}
+
+.result__top-inner {
+  background-color: #F1F8FF;
+  padding: 18px 25px;
+  gap: 30px;
+}
+.result__totalflight-inner {
+  gap: 30px;
+}
+.result__totalflight-inner p {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+.result__flight-inner {
+  gap: 15px;
+  background-color: #fff;
+}
+.result__flight-details {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+.result__sortby-inner a {
+  padding: 18px 25px;
+}
+.result__left-inner {
+  background-color: #fff;
+}
+.result__time-inner {
+  gap: 15px;
+  border-bottom: 2px solid #EAECF0;
+}
+.result__time-inner .minute p,
+.result__time-inner .second p {
+  background-color: #005EB8;
+  color: #fff;
+  font-size: 18px;
+}
+.result__time-inner .divider {
+  margin-top: -10px;
+}
+.result__filterairline-inner {
+  border-bottom: 2px solid #EAECF0;
+}
+.result__filterairline-inner .checkair .check {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+}
+@media (min-width: 992px) {
+  .result__filterairline-inner .checkair .check label {
+    font-size: 18px;
+  }
+}
+.result__filterprice-inner {
+  border-bottom: 2px solid #EAECF0;
+}
+.result__departure-inner {
+  border-bottom: 2px solid #EAECF0;
+}
+.result__item-inner {
+  background-color: #F1F8FF;
+}
+@media (min-width: 992px) {
+  .result__refoundable-inner .checkair .check label {
+    font-size: 18px;
+  }
 }
 
 .social {

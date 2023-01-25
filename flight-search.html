@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML &mdash; Demo Template </title>
+
+  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/aos.css">
+  <link rel="stylesheet" href="assets/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+
+
+  <!-- main css for template -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+
+  <!-- ===============>> Preloader start here <<================= -->
+
+  <!-- ===============>> Preloader end here <<================= -->
+
+
+  <!-- ===============>> Flight start here <<================= -->
+  <section class="flight padding-top padding-bottom bg-color">
+    <div class="container">
+      <div class="flight__wrapper">
+        <div class="flight__header">
+          <div class="flight__header-icon">
+            <img src="assets/images/logo/flight.png" alt="flight icon">
+          </div>
+          <div class="flight__header-text">
+            <p>Flight</p>
+          </div>
+        </div>
+
+        <div class="flight__choose">
+          <ul class="nav nav-pills mb-4" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active " id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                type="button" role="tab" aria-controls="pills-home" aria-selected="true"> <span
+                  class="round-btn"></span> One Way</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+                type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><span
+                  class="round-btn"></span>Round Way</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+                type="button" role="tab" aria-controls="pills-contact" aria-selected="false"><span
+                  class="round-btn"></span>Multi City</button>
+            </li>
+          </ul>
+          <div class="tab-content" id="pills-tabContent">
+
+            <!-- one way  -->
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+              tabindex="0">
+              <div class="flight__oneway">
+                <div class="row g-3">
+                  <div class="col-lg-3">
+                    <div class="flight__item">
+                      <span>=</span>
+                      <div class="flight__item-inner">
+                        <p>FROM</p>
+                        <h4>Dhaka</h4>
+                        <small>DAC, Hazrat Shahjalal International Airport, Dhaka</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="flight__item">
+                      <!-- <div class="flight__item-swap">
+                                                <span></span>
+                                            </div> -->
+                      <div class="flight__item-inner">
+                        <p>TO</p>
+                        <h4> Cox's Bazar </h4>
+                        <small> DAC, Cox’s Bazar Airport</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="flight__item">
+                      <div class="flight__item-inner">
+                        <p>JOURNEY DATE</p>
+                        <h4>25 <span> Dec'23 </span></h4>
+                        <small>Sunday</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="flight__item">
+                      <div class="flight__item-inner">
+                        <p>TRAVELER, CLASS</p>
+                        <h4>1 Traveler</h4>
+                        <small>Economy</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- round way  -->
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+              tabindex="0">
+              <div class="flight__oneway">
+                <div class="row g-3">
+                  <div class="col-lg-3">
+                    <div class="flight__item">
+                      <div class="flight__item-inner">
+                        <p>FROM</p>
+                        <h4>Dhaka</h4>
+                        <small>DAC, Hazrat Shahjalal International Air</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="flight__item">
+                      <!-- <div class="flight__item-swap">
+                                                <span></span>
+                                            </div> -->
+                      <div class="flight__item-inner">
+                        <p>TO</p>
+                        <h4> Cox's Bazar </h4>
+                        <small> DAC, Cox’s Bazar Airport</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="flight__item">
+                      <div class="flight__item-inner journey-date">
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <div class="flight__date">
+                              <div class="flight__date-journey">
+                                <p>JOURNEY DATE</p>
+                                <h4>25 <span> Jan'27 </span></h4>
+                                <small>Sunday</small>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="flight__date">
+                              <div class="flight__date-return">
+                                <p>RETURN DATE</p>
+                                <h4>30 <span> Dec'23 </span></h4>
+                                <small>Monday</small>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2">
+                    <div class="flight__item">
+                      <div class="flight__item-inner">
+                        <p>TRAVELER, CLASS</p>
+                        <h4>1 Traveler</h4>
+                        <small>Economy</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- multi way  -->
+            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"
+              tabindex="0">
+
+              <div class="flight__oneway">
+                <div class="row g-3">
+                  <div class="col-lg-3">
+                    <div class="flight__item">
+                      <div class="flight__item-inner">
+                        <p>FROM</p>
+                        <h4>Dhaka</h4>
+                        <small>DAC, Hazrat Shahjalal International Air</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="flight__item">
+                      <!-- <div class="flight__item-swap">
+                                                <span></span>
+                                            </div> -->
+                      <div class="flight__item-inner">
+                        <p>TO</p>
+                        <h4> Cox's Bazar </h4>
+                        <small> DAC, Cox’s Bazar Airport</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="flight__item">
+                      <div class="flight__item-inner">
+                        <p>JOURNEY DATE</p>
+                        <h4>25 <span> Dec'23 </span></h4>
+                        <small>Sunday</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="flight__item">
+                      <div class="flight__item-inner">
+                        <p>TRAVELER, CLASS</p>
+                        <h4>1 Traveler</h4>
+                        <small>Economy</small>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-3">
+                    <div class="flight__item">
+                      <div class="flight__item-inner">
+                        <p>FROM</p>
+                        <h4>Dhaka</h4>
+                        <small>DAC, Hazrat Shahjalal International Air</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="flight__item">
+                      <!-- <div class="flight__item-swap">
+                                                <span></span>
+                                            </div> -->
+                      <div class="flight__item-inner">
+                        <p>TO</p>
+                        <h4> Cox's Bazar </h4>
+                        <small> DAC, Cox’s Bazar Airport</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="flight__item">
+                      <div class="flight__item-inner">
+                        <p>JOURNEY DATE</p>
+                        <h4>25 <span> Dec'23 </span></h4>
+                        <small>Sunday</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="flight__item">
+                      <div class="flight__item-inner">
+                        <p>TRAVELER, CLASS</p>
+                        <h4>1 Traveler</h4>
+                        <small>Economy</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flight__search">
+          <div class="flight__search-inner">
+            <a href="flight-search.html" class="default-btn search-btn text-center">Modify Search</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===============>> Flight end here <<================= -->
+
+
+  <!-- ===============>> Flight search result start here <<================= -->
+  <section class="result padding-top padding-bottom bg-color">
+    <div class="container">
+      <div class="result__wrapper">
+        <div class="result__top">
+          <div class="result__top-inner">
+            <div class="result__totalflight">
+              <div class="result__totalflight-inner">
+                <p class="mb-0">83 flights found</p>
+                <div class="result__flight">
+                  <div class="result__flight-inner">
+                    <div class="result__flight-thumb">
+                      <img src="assets/images/others/1.png" alt="US airline image">
+                    </div>
+                    <div class="result__flight-details">
+                      <p class="mb-0">৳<span>9111</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="result__flight">
+                  <div class="result__flight-inner">
+                    <div class="result__flight-thumb">
+                      <img src="assets/images/others/2.png" alt="US airline image">
+                    </div>
+                    <div class="result__flight-details">
+                      <p class="mb-0">৳<span>13273</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="result__sortby">
+              <div class="result__sortby-inner">
+                <a href="#" class="default-btn">Sort by <i class="fas fa-angle-down"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="result__content">
+          <div class="row g-4">
+            <div class="col-lg-4">
+              <div class="result__left">
+                <div class="result__left-inner">
+                  <div class="result__time">
+                    <div class="result__time-inner">
+                      <div class="minute">
+
+                        <p class="mb-0"> 30 </p>
+                        <small>min</small>
+                      </div>
+                      <div class="divider">
+                        <h3> : </h3>
+                      </div>
+                      <div class="second">
+                        <p class="mb-0"> 20 </p>
+                        <small>sec</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="result__filterairline">
+                    <div class="result__filterairline-inner">
+                      <h6>Filter by Airline</h6>
+                      <form action="#">
+                        <div class="account__form-passcheck checkair">
+                          <div class="form-check check">
+                            <input type="checkbox" class="form-check-input" value="" id="terms-check">
+                            <label for="terms-check" class="form-check-label">
+                              <img src="assets/images/others/1.png" alt="us airline image">
+                              US-Bangla Airlines(63)
+                            </label>
+                          </div>
+                          <div class="form-check check">
+                            <input type="checkbox" class="form-check-input" value="" id="terms-check">
+                            <label for="terms-check" class="form-check-label">
+                              <img src="assets/images/others/2.png" alt="us airline image">
+                              Biman Bangladesh Airlines(20)
+                            </label>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="result__filterprice">
+                    <div class="result__filterprice-inner">
+                      <h6>Filter Price Range</h6>
+                      <form action="#">
+                        <div class="checkair">
+
+                          <input type="range" class="form-range" id="customRange1">
+                          <label for="customRange1" class="form-label">5000 tk - 12200 tk</label>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="result__departure">
+                    <div class="result__departure-inner">
+                      <h6>
+                        Departure time in Dhaka
+                      </h6>
+                      <div class="row g-4">
+                        <div class="col-lg-3">
+                          <div class="result__item">
+                            <div class="result__item-inner">
+                              <img src="assets/images/others/3.png" alt="sun">
+                              <p class="mb-0">00-06</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3">
+                          <div class="result__item">
+                            <div class="result__item-inner">
+                              <img src="assets/images/others/4.png" alt="sun">
+                              <p class="mb-0">06-30</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3">
+                          <div class="result__item">
+                            <div class="result__item-inner">
+                              <img src="assets/images/others/5.png" alt="sun">
+                              <p class="mb-0">06-00</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-3">
+                          <div class="result__item">
+                            <div class="result__item-inner">
+                              <img src="assets/images/others/6.png" alt="sun">
+                              <p class="mb-0">00-06</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="result__refoundable">
+                    <div class="result__refoundable-inner">
+                      <h6>Refundable</h6>
+                      <form action="#">
+                        <div class="checkair">
+                          <div class="form-check check">
+                            <input type="checkbox" class="form-check-input" value="" id="terms-check">
+                            <label for="terms-check" class="form-check-label">
+                              Partially Refundable (20)
+                            </label>
+                          </div>
+                          <div class="form-check check">
+                            <input type="checkbox" class="form-check-input" value="" id="terms-check">
+                            <label for="terms-check" class="form-check-label">
+                              Non Refundable (4)
+                            </label>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="result__right">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===============>> Flight search result end here <<================= -->
+
+
+  <!-- ===============>> footer start here <<================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__wrapper padding-top ">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <div class="footer__about">
+              <a href="index.html"><img src="assets/images/logo/white-logo.png" alt="Logo"></a>
+              <p class="footer__about-moto">Minim mollit non deserunt ullamco est sit aliqua dolor do amet
+                sint. Velit officia
+                consequat duis sunt nostrud amet.</p>
+              <ul class="footer__about-info">
+                <li class="footer__about-item"> <img src="assets/images/icon/1.svg" alt="phone"> <a href="Teliphone:+880
+                                    01XXXXXXXXX"></a> +880
+                  01XXXXXXXXX</li>
+                <li class="footer__about-item"> <img src="assets/images/icon/2.svg" alt="mail"> <a
+                    href="mail:mail@thetork.com"></a>
+                  mail@thetork.com</li>
+                <li class="footer__about-item">
+                  <div class="footer__about-location">
+                    <img src="assets/images/icon/3.svg" alt="location">
+                    <div class="footer__about-locationdetails">
+                      <p>2118 Thornridge Cir. Syracuse, Connecticut 35624, New York, USA</p>
+                    </div>
+                  </div>
+
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="footer__links">
+              <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                  <div class="footer__links-item">
+                    <div class="footer__links-tittle">
+                      <h6>Company</h6>
+                    </div>
+                    <div class="footer__links-content">
+                      <ul class="footer__linklist">
+                        <li class="footer__linklist-item"> <a href="#">About Us</a> </li>
+                        <li class="footer__linklist-item"> <a href="#">Refund Policy</a> </li>
+                        <li class="footer__linklist-item"> <a href="#">Privacy Policy</a> </li>
+                        <li class="footer__linklist-item"> <a href="#">Terms and Conditions</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <div class="footer__links-tittle">
+                    <h6>Payment Methods</h6>
+                  </div>
+                  <div class="footer__links-content">
+                    <img src="assets/images/payment/1.png" alt="payment imgae">
+                    <img src="assets/images/payment/2.png" alt="payment imgae">
+                    <img src="assets/images/payment/3.png" alt="payment imgae">
+                    <img src="assets/images/payment/4.png" alt="payment imgae">
+                    <img src="assets/images/payment/5.png" alt="payment imgae">
+                    <img src="assets/images/payment/6.png" alt="payment imgae">
+                    <img src="assets/images/payment/7.png" alt="payment imgae">
+                  </div>
+
+                </div>
+                <div class="col-lg-4 col-12">
+                  <div class="footer__links-tittle">
+                    <h6>Subscribe Now</h6>
+                  </div>
+                  <div class="footer__links-content">
+                    <p class="mb-4">Subscribe for latest updates & promotions</p>
+
+
+                    <p>Enter email address</p>
+                    <div class="input-group mb-5">
+
+                      <input type="text" class="form-control" placeholder="Enter Your Email"
+                        aria-label="Email Newsletter" aria-describedby="email-newsletter">
+                      <button class="input-group-text " id="email-newsletter"><i
+                          class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="footer__end">
+              <div class="footer__end-copyright">
+                <p class=" mb-0">© 2023 Copyright | All Rights Reserved </p>
+              </div>
+              <div class="footer__end-social">
+                <ul class="social">
+                  <li class="social__item">
+                    <a href="#" class="social__link"><i class="fab fa-facebook-f"></i></a>
+                  </li>
+                  <li class="social__item">
+                    <a href="#" class="social__link"><i class="fab fa-instagram"></i></a>
+                  </li>
+                  <li class="social__item">
+                    <a href="#" class="social__link"><i class="fab fa-youtube"></i></a>
+                  </li>
+                  <li class="social__item">
+                    <a href="signin.html" class="social__link"><i class="fab fa-twitter"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- ===============>> footer end here <<================= -->
+
+
+  <!-- scrollToTop start here -->
+  <a href="#" class="scrollToTop"><i class="fa-solid fa-arrow-up-from-bracket"></i></a>
+  <!-- scrollToTop ending here -->
+
+
+
+  <!-- vendor plugins -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/all.min.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/aos.js"></script>
+
+
+
+
+  <script src="assets/js/custom.js"></script>
+
+</body>
+
+</html>

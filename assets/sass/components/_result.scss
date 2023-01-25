@@ -1,0 +1,199 @@
+.result {
+    &__top {
+        &-inner {
+            background-color: $banner-color;
+            padding: 18px 25px;
+            gap: 30px;
+            @extend %br-15,
+            %mb-25,
+            %flex,
+            %align-items-center,
+            %justify-between;
+        }
+    }
+
+    &__totalflight {
+        &-inner {
+            @extend %flex,
+            %align-items-center;
+            gap: 30px;
+
+            p {
+                font-size: 18px;
+                font-weight: 500;
+                font-family: $title-font;
+            }
+
+        }
+    }
+
+    &__flight {
+        &-inner {
+            @extend %flex,
+            %border-radius-8,
+            %py-15,
+            %px-25,
+            %align-items-center;
+            gap: 15px;
+            background-color: $white-color;
+        }
+
+        &-details {
+            font-size: 18px;
+            font-weight: 500;
+            font-family: $title-font;
+        }
+
+
+
+    }
+
+
+    &__sortby {
+        &-inner {
+            a {
+                padding: 18px 25px;
+            }
+
+            i {
+                @extend %ml-5;
+            }
+        }
+    }
+
+
+
+    // result content
+    // left
+
+    &__left {
+        &-inner {
+            background-color: $white-color;
+            @extend %br-15,
+            %py-30,
+            %px-25;
+        }
+    }
+
+    &__time {
+        &-inner {
+            @extend %flex,
+            %align-items-center,
+            %justify-center,
+            %pb-25;
+            gap: 15px;
+            border-bottom: 2px solid #EAECF0;
+
+            .minute,
+            .second {
+                p {
+                    @extend %p-10,
+                    %border-radius-8;
+                    background-color: $theme-color;
+                    color: $white-color;
+                    font-size: 18px;
+                }
+
+                small {
+                    @extend %ml-10;
+                }
+            }
+
+            .divider {
+                margin-top: -10px;
+            }
+        }
+    }
+
+    &__filterairline {
+        &-inner {
+            @extend %pb-35;
+            border-bottom: 2px solid #EAECF0;
+
+            h6 {
+                @extend %pt-25;
+            }
+
+
+            .checkair {
+                @extend %my-25;
+
+                .check {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 15px;
+
+                    @include breakpoint(lg) {
+                        label {
+                            font-size: 18px;
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }
+
+
+    &__filterprice {
+        &-inner {
+            @extend %pb-35;
+            border-bottom: 2px solid #EAECF0;
+
+            h6 {
+                @extend %pt-25;
+            }
+        }
+    }
+
+    &__departure {
+        &-inner {
+            @extend %pb-35;
+            border-bottom: 2px solid #EAECF0;
+
+            h6 {
+                @extend %pt-25;
+            }
+
+
+        }
+    }
+
+    &__item {
+        &-inner {
+            @extend %border-radius-8, %py-15, %px-10, %text-center, %mt-25;
+            background-color: $banner-color;
+            img{
+                @extend %mb-10;
+            }
+        }
+    }
+
+
+    &__refoundable {
+        &-inner {
+            @extend %pb-35;
+
+            h6 {
+                @extend %pt-25;
+            }
+
+
+            .checkair {
+                @extend %my-25;
+
+                .check {
+
+                    @include breakpoint(lg) {
+                        label {
+                            font-size: 18px;
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }
+}
