@@ -971,7 +971,7 @@ a:hover {
 }
 
 /* @@@@@@@@@@@@@  Extend Property CSS start here  @@@@@@@@@@@@@@ */
-.social, .result__time-inner, .result__flight-inner, .result__totalflight-inner, .result__top-inner, .flight__header, .footer__end, .account__form-passcheck {
+.social, .result__time-inner, .result__flight-inner, .result__totalflight-inner, .result__top-inner, .flight__rightitem-inner, .flight__header, .footer__end, .account__form-passcheck {
   display: flex;
   flex-wrap: wrap;
 }
@@ -1014,7 +1014,7 @@ a:hover {
 }
 
 .service__item-inner, .result__item-inner, .result__time-inner .minute p,
-.result__time-inner .second p, .result__flight-inner, .default-btn {
+.result__time-inner .second p, .result__flight-inner, .default-btn, .flight__right-inner {
   border-radius: 8px;
 }
 
@@ -1481,6 +1481,12 @@ ol {
 .flight__search-inner a:hover {
   background-color: #F7A827;
   color: #101828;
+}
+.flight__right-inner {
+  background-color: #fff;
+}
+.flight__rightitem-inner {
+  gap: 15px;
 }
 
 .default-btn {
