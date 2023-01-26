@@ -72,6 +72,13 @@
             @extend %br-15,
             %py-30,
             %px-25;
+            &:not(.result__left.is-visible .result__left-inner){
+                display: none;
+            }
+
+            @include breakpoint(lg) {
+                display: block;
+            }
         }
     }
 
@@ -162,9 +169,14 @@
 
     &__item {
         &-inner {
-            @extend %border-radius-8, %py-15, %px-10, %text-center, %mt-25;
+            @extend %border-radius-8,
+            %py-15,
+            %px-10,
+            %text-center,
+            %mt-25;
             background-color: $banner-color;
-            img{
+
+            img {
                 @extend %mb-10;
             }
         }
@@ -196,4 +208,155 @@
 
         }
     }
+
+
+    // mobile left
+    &__mobileleft {
+        &-inner {
+            @extend %flex,
+            %align-items-center,
+            %justify-between,
+            %p-20,
+            %border-radius-8;
+            background: $bg-color1;
+
+            p {
+                font-weight: 500;
+                color: $title-color;
+            }
+
+            .search-filter{
+                cursor: pointer;
+            }
+
+        }
+    }
+
+
+    // right side 
+
+    &__right {
+        &-inner {
+            background-color: $white-color;
+            @extend %flex,
+            %justify-center,
+            %border-radius-8,
+            %align-items-center,
+            %py-30,
+            %px-10;
+            gap: 35px;
+
+
+            @include breakpoint(lg) {
+                gap: 25px;
+            }
+
+            @include breakpoint(xxl) {
+                justify-content: flex-end;
+                gap: 15px;
+                padding: 0;
+            }
+        }
+    }
+
+    &__show {
+
+        &-airname,
+        &-duration,
+        &-timeview {
+            @extend %flex,
+            %align-items-center;
+            gap: 15px;
+        }
+
+        &-airname {
+            img {
+                @extend %border-radius-8;
+                padding: 8px;
+                box-shadow: 4px 4px 16px rgba(65, 147, 224, 0.08);
+            }
+
+            p {
+                max-inline-size: 10ch;
+                font-weight: 500;
+                color: $title-color;
+
+            }
+        }
+
+        &-duration {
+
+            .start-time,
+            .end-time {
+                p {
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: $title-color;
+                }
+
+                small {
+                    font-size: 12px;
+                    font-weight: 600;
+                    color: $optional-color1;
+                    opacity: 0.5;
+                }
+            }
+
+            .thumb-img {
+                p {
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: $optional-color;
+                }
+            }
+        }
+
+        &-timeview {
+            p {
+                font-weight: 700;
+                font-size: 14px;
+                color: $optional-color;
+            }
+
+        }
+
+
+        &-price {
+            @extend %p-15,
+            %border-radius-8,
+            %text-center;
+            background: $bg-color1;
+
+
+            @include breakpoint(xxl) {
+                border-radius: 0px 8px 8px 0px;
+                padding: 25px;
+            }
+
+            h3 {
+                display: inline-flex;
+                @extend %align-items-center;
+
+                span {
+                    font-size: 14px;
+                    font-weight: 500;
+                    @extend %mr-5;
+                }
+
+                small {
+                    font-size: 14px;
+                    font-weight: 400;
+                    opacity: 0.4;
+                    @extend %mt-15;
+                }
+            }
+
+            p {
+                font-weight: 500;
+                color: $black-color;
+            }
+        }
+    }
+
+
 }

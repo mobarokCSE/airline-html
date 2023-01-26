@@ -17,6 +17,23 @@
 }
 
 
+
+// lg none
+.lg-none {
+    @include breakpoint(lg) {
+        display: none;
+    }
+
+    @include breakpoint(xl) {
+        display: none;
+    }
+
+    @include breakpoint(xxl) {
+        display: none;
+    }
+}
+
+
 // default input field style (overrides some bootstrap css)
 .form-control {
     background-color: transparent;

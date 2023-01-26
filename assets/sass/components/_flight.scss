@@ -77,17 +77,32 @@
     &__item {
         @extend %p-rel;
 
-        >span {
+        &-swap {
             @extend %p-abs;
             @include box(40px);
             @include add-prefix(transform, translateY(-50%));
             border-radius: 50%;
-            background-color: red;
+            background-color: $secondary-color;
+            border: 1px solid $white-color;
+            color: $black-color;
             display: grid;
+            left: 50%;
+            bottom: -20%;
+            // transform: translate(-50%, -50%);
+            transform: translateX(-50%) rotate(90deg);
+
+            // transform: rotate(90deg);
             place-items: center;
-            right: -30px;
-            top: 50%;
             z-index: 1;
+
+            @include breakpoint(lg) {
+                left: auto;
+                bottom: 34%;
+                transform: rotate(0deg);
+                right: -27px;
+            }
+
+
         }
 
         &-inner {
@@ -150,23 +165,6 @@
 
 
 
-    // right side 
 
-    &__right {
-        &-inner {
-            // padding: 55px 16px;
-            @extend %border-radius-8;
-            background-color: $white-color;
-
-
-        }
-    }
-
-    &__rightitem {
-        &-inner {
-            @extend %flex;
-            gap: 15px; 
-        }
-    }
 
 }

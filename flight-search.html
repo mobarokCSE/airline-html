@@ -68,7 +68,7 @@
                 <div class="row g-3">
                   <div class="col-lg-3">
                     <div class="flight__item">
-                      <span>=</span>
+                      <span class="flight__item-swap"><i class="fas fa-arrow-right-arrow-left"></i></span>
                       <div class="flight__item-inner">
                         <p>FROM</p>
                         <h4>Dhaka</h4>
@@ -184,6 +184,7 @@
                 <div class="row g-3">
                   <div class="col-lg-3">
                     <div class="flight__item">
+                      <span class="flight__item-swap"><i class="fas fa-arrow-right-arrow-left"></i></span>
                       <div class="flight__item-inner">
                         <p>FROM</p>
                         <h4>Dhaka</h4>
@@ -224,6 +225,7 @@
 
                   <div class="col-lg-3">
                     <div class="flight__item">
+                      <span class="flight__item-swap"><i class="fas fa-arrow-right-arrow-left"></i></span>
                       <div class="flight__item-inner">
                         <p>FROM</p>
                         <h4>Dhaka</h4>
@@ -280,7 +282,7 @@
 
 
   <!-- ===============>> Flight search result start here <<================= -->
-  <section class="result padding-top padding-bottom bg-color">
+  <section class="result padding-bottom bg-color">
     <div class="container">
       <div class="result__wrapper">
         <div class="result__top">
@@ -312,7 +314,14 @@
             </div>
             <div class="result__sortby">
               <div class="result__sortby-inner">
-                <a href="#" class="default-btn">Sort by <i class="fas fa-angle-down"></i></a>
+
+                <select class="form-select select-btn" aria-label="Default select example">
+                  <option selected>Sort by</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+
               </div>
             </div>
           </div>
@@ -378,7 +387,7 @@
                       <h6>
                         Departure time in Dhaka
                       </h6>
-                      <div class="row g-4">
+                      <div class="row g-2">
                         <div class="col-lg-3">
                           <div class="result__item">
                             <div class="result__item-inner">
@@ -419,13 +428,13 @@
                       <h6>Refundable</h6>
                       <form action="#">
                         <div class="checkair">
-                          <div class="form-check check">
+                          <div class="form-check check mb-3">
                             <input type="checkbox" class="form-check-input" value="" id="terms-check">
                             <label for="terms-check" class="form-check-label">
                               Partially Refundable (20)
                             </label>
                           </div>
-                          <div class="form-check check">
+                          <div class="form-check check ">
                             <input type="checkbox" class="form-check-input" value="" id="terms-check">
                             <label for="terms-check" class="form-check-label">
                               Non Refundable (4)
@@ -439,24 +448,347 @@
               </div>
             </div>
             <div class="col-lg-8">
-              <div class="row">
-                <div class="result__right">
-                  <div class="result__rigth-inner">
-                    <div class="col-lg-3">
-                      <div class="result__rightitem">
-                        <div class="result__rightitem-inner">
-                          <div class="result__rightitem-thumb">
+              <div class="row g-4">
+
+
+                <div class="col-lg-12 lg-none">
+                  <div class="result__mobileleft">
+                    <div class="result__mobileleft-inner">
+                      <p class="mb-0">Filter your search results</p>
+                      <div class="search-filter" data-bs-toggle="modal" data-bs-target="#filter-result">
+                        <i class="fas fa-filter"></i>
+                      </div>
+
+
+
+                      <!-- search result model for mobile -->
+                      <div class="modal fade" id="filter-result" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-scrollable">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="result">
+
+                                <div class="result__left is-visible">
+                                  <div class="result__left-inner">
+                                    <div class="result__time">
+                                      <div class="result__time-inner">
+                                        <div class="minute">
+
+                                          <p class="mb-0"> 30 </p>
+                                          <small>min</small>
+                                        </div>
+                                        <div class="divider">
+                                          <h3> : </h3>
+                                        </div>
+                                        <div class="second">
+                                          <p class="mb-0"> 20 </p>
+                                          <small>sec</small>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="result__filterairline">
+                                      <div class="result__filterairline-inner">
+                                        <h6>Filter by Airline</h6>
+                                        <form action="#">
+                                          <div class="account__form-passcheck checkair">
+                                            <div class="form-check check">
+                                              <input type="checkbox" class="form-check-input" value="" id="terms-check">
+                                              <label for="terms-check" class="form-check-label">
+                                                <img src="assets/images/others/1.png" alt="us airline image">
+                                                US-Bangla Airlines(63)
+                                              </label>
+                                            </div>
+                                            <div class="form-check check">
+                                              <input type="checkbox" class="form-check-input" value="" id="terms-check">
+                                              <label for="terms-check" class="form-check-label">
+                                                <img src="assets/images/others/2.png" alt="us airline image">
+                                                Biman Bangladesh Airlines(20)
+                                              </label>
+                                            </div>
+                                          </div>
+                                        </form>
+                                      </div>
+                                    </div>
+                                    <div class="result__filterprice">
+                                      <div class="result__filterprice-inner">
+                                        <h6>Filter Price Range</h6>
+                                        <form action="#">
+                                          <div class="checkair">
+
+                                            <input type="range" class="form-range" id="customRange1">
+                                            <label for="customRange1" class="form-label">5000 tk - 12200 tk</label>
+                                          </div>
+                                        </form>
+                                      </div>
+                                    </div>
+                                    <div class="result__departure">
+                                      <div class="result__departure-inner">
+                                        <h6>
+                                          Departure time in Dhaka
+                                        </h6>
+                                        <div class="row g-2">
+                                          <div class="col-lg-3">
+                                            <div class="result__item">
+                                              <div class="result__item-inner">
+                                                <img src="assets/images/others/3.png" alt="sun">
+                                                <p class="mb-0">00-06</p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="col-lg-3">
+                                            <div class="result__item">
+                                              <div class="result__item-inner">
+                                                <img src="assets/images/others/4.png" alt="sun">
+                                                <p class="mb-0">06-30</p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="col-lg-3">
+                                            <div class="result__item">
+                                              <div class="result__item-inner">
+                                                <img src="assets/images/others/5.png" alt="sun">
+                                                <p class="mb-0">06-00</p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div class="col-lg-3">
+                                            <div class="result__item">
+                                              <div class="result__item-inner">
+                                                <img src="assets/images/others/6.png" alt="sun">
+                                                <p class="mb-0">00-06</p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="result__refoundable">
+                                      <div class="result__refoundable-inner">
+                                        <h6>Refundable</h6>
+                                        <form action="#">
+                                          <div class="checkair">
+                                            <div class="form-check check mb-3">
+                                              <input type="checkbox" class="form-check-input" value="" id="terms-check">
+                                              <label for="terms-check" class="form-check-label">
+                                                Partially Refundable (20)
+                                              </label>
+                                            </div>
+                                            <div class="form-check check ">
+                                              <input type="checkbox" class="form-check-input" value="" id="terms-check">
+                                              <label for="terms-check" class="form-check-label">
+                                                Non Refundable (4)
+                                              </label>
+                                            </div>
+                                          </div>
+                                        </form>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+
+
+                <div class="col-lg-12">
+                  <div class="result__right">
+                    <div class="result__right-inner">
+                      <div class="result__show">
+                        <div class="result__show-airname">
+                          <div class="result__show-thumb">
                             <img src="assets/images/others/2.png" alt="BB airline image">
                           </div>
-                          <div class="result__rightitem-content">
+                          <div class="result__show-content">
                             <p class="mb-0">Biman Bangladesh</p>
                           </div>
                         </div>
                       </div>
+                      <div class="result__show">
+                        <div class="result__show-duration">
+                          <div class="start-time text-end">
+                            <p class="mb-0">12:10</p>
+                            <small>DAC</small>
+                          </div>
+                          <div class="thumb-img">
+                            <img src="assets/images/others/7.png" alt="arow icon">
+                            <p class="mb-0 text-center">Non-Stop</p>
+                          </div>
+                          <div class="end-time">
+                            <p class="mb-0">12:10</p>
+                            <small>CXB</small>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="result__show">
+                        <div class="result__show-timeview">
+                          <p class="mb-0">01h 15m </p>
+
+                          <a href="#" class="default-btn view-btn">View Details</a>
+                        </div>
+                      </div>
+
+                      <div class="result__show">
+                        <div class="result__show-price">
+                          <h3 class="mb-0"><span>Price</span>900<small>IB</small></h3>
+                          <p>Partially Refundable</p>
+                          <a href="#" class="default-btn">Book Now</a>
+                        </div>
+                      </div>
                     </div>
-                    <div class="col-lg-3"></div>
-                    <div class="col-lg-3"></div>
-                    <div class="col-lg-3"></div>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="result__right">
+                    <div class="result__right-inner">
+                      <div class="result__show">
+                        <div class="result__show-airname">
+                          <div class="result__show-thumb">
+                            <img src="assets/images/others/1.png" alt="US airline image">
+                          </div>
+                          <div class="result__show-content">
+                            <p class="mb-0">US-Bangla Airlines</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="result__show">
+                        <div class="result__show-duration">
+                          <div class="start-time text-end">
+                            <p class="mb-0">12:10</p>
+                            <small>DAC</small>
+                          </div>
+                          <div class="thumb-img">
+                            <img src="assets/images/others/7.png" alt="arow icon">
+                            <p class="mb-0 text-center">Non-Stop</p>
+                          </div>
+                          <div class="end-time">
+                            <p class="mb-0">12:10</p>
+                            <small>CXB</small>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="result__show">
+                        <div class="result__show-timeview">
+                          <p class="mb-0">01h 15m </p>
+
+                          <a href="#" class="default-btn view-btn">View Details</a>
+                        </div>
+                      </div>
+
+                      <div class="result__show">
+                        <div class="result__show-price">
+                          <h3 class="mb-0"><span>Price</span>600<small>IB</small></h3>
+                          <p>Partially Refundable</p>
+                          <a href="#" class="default-btn">Book Now</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="result__right">
+                    <div class="result__right-inner">
+                      <div class="result__show">
+                        <div class="result__show-airname">
+                          <div class="result__show-thumb">
+                            <img src="assets/images/others/2.png" alt="BB airline image">
+                          </div>
+                          <div class="result__show-content">
+                            <p class="mb-0">Biman Bangladesh</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="result__show">
+                        <div class="result__show-duration">
+                          <div class="start-time text-end">
+                            <p class="mb-0">12:10</p>
+                            <small>DAC</small>
+                          </div>
+                          <div class="thumb-img">
+                            <img src="assets/images/others/7.png" alt="arow icon">
+                            <p class="mb-0 text-center">Non-Stop</p>
+                          </div>
+                          <div class="end-time">
+                            <p class="mb-0">12:10</p>
+                            <small>CXB</small>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="result__show">
+                        <div class="result__show-timeview">
+                          <p class="mb-0">01h 15m </p>
+
+                          <a href="#" class="default-btn view-btn">View Details</a>
+                        </div>
+                      </div>
+
+                      <div class="result__show">
+                        <div class="result__show-price">
+                          <h3 class="mb-0"><span>Price</span>900<small>IB</small></h3>
+                          <p>Partially Refundable</p>
+                          <a href="#" class="default-btn">Book Now</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="result__right">
+                    <div class="result__right-inner">
+                      <div class="result__show">
+                        <div class="result__show-airname">
+                          <div class="result__show-thumb">
+                            <img src="assets/images/others/1.png" alt="BB airline image">
+                          </div>
+                          <div class="result__show-content">
+                            <p class="mb-0">US-Bangla Airlines</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="result__show">
+                        <div class="result__show-duration">
+                          <div class="start-time text-end">
+                            <p class="mb-0">12:10</p>
+                            <small>DAC</small>
+                          </div>
+                          <div class="thumb-img">
+                            <img src="assets/images/others/7.png" alt="arow icon">
+                            <p class="mb-0 text-center">Non-Stop</p>
+                          </div>
+                          <div class="end-time">
+                            <p class="mb-0">12:10</p>
+                            <small>CXB</small>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="result__show">
+                        <div class="result__show-timeview">
+                          <p class="mb-0">01h 15m </p>
+
+                          <a href="#" class="default-btn view-btn">View Details</a>
+                        </div>
+                      </div>
+
+                      <div class="result__show">
+                        <div class="result__show-price">
+                          <h3 class="mb-0"><span>Price</span>500<small>IB</small></h3>
+                          <p>Partially Refundable</p>
+                          <a href="#" class="default-btn">Book Now</a>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -467,6 +799,18 @@
     </div>
   </section>
   <!-- ===============>> Flight search result end here <<================= -->
+
+<div class="dropdown">
+  <div class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown link
+  </div>
+
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+</div>
 
 
   <!-- ===============>> footer start here <<================= -->

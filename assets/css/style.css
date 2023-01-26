@@ -855,6 +855,22 @@ a:hover {
   }
 }
 
+@media (min-width: 992px) {
+  .lg-none {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .lg-none {
+    display: none;
+  }
+}
+@media (min-width: 1400px) {
+  .lg-none {
+    display: none;
+  }
+}
+
 .form-control {
   background-color: transparent;
   border-color: rgba(0, 94, 184, 0.2);
@@ -971,7 +987,7 @@ a:hover {
 }
 
 /* @@@@@@@@@@@@@  Extend Property CSS start here  @@@@@@@@@@@@@@ */
-.social, .result__time-inner, .result__flight-inner, .result__totalflight-inner, .result__top-inner, .flight__rightitem-inner, .flight__header, .footer__end, .account__form-passcheck {
+.social, .result__show-airname, .result__show-duration, .result__show-timeview, .result__right-inner, .result__mobileleft-inner, .result__time-inner, .result__flight-inner, .result__totalflight-inner, .result__top-inner, .flight__header, .footer__end, .account__form-passcheck {
   display: flex;
   flex-wrap: wrap;
 }
@@ -980,7 +996,7 @@ a:hover {
   position: relative;
 }
 
-.offer__item-content, .offer__item-badge, .offer__item-thumb:after, .flight__item > span, .flight__choose .round-btn::after, .footer__linklist-item a::after {
+.offer__item-content, .offer__item-badge, .offer__item-thumb:after, .flight__item-swap, .flight__choose .round-btn::after, .footer__linklist-item a::after {
   position: absolute;
   content: "";
 }
@@ -997,15 +1013,15 @@ a:hover {
   height: 100%;
 }
 
-.result__time-inner, .account__social-btn {
+.result__right-inner, .result__time-inner, .account__social-btn {
   justify-content: center;
 }
 
-.result__top-inner, .footer__end, .account__form-passcheck {
+.result__mobileleft-inner, .result__top-inner, .footer__end, .account__form-passcheck {
   justify-content: space-between;
 }
 
-.result__time-inner, .result__flight-inner, .result__totalflight-inner, .result__top-inner, .account__form-passcheck {
+.result__show-price h3, .result__show-airname, .result__show-duration, .result__show-timeview, .result__right-inner, .result__mobileleft-inner, .result__time-inner, .result__flight-inner, .result__totalflight-inner, .result__top-inner, .account__form-passcheck {
   align-items: center;
 }
 
@@ -1013,8 +1029,8 @@ a:hover {
   display: inline-block;
 }
 
-.service__item-inner, .result__item-inner, .result__time-inner .minute p,
-.result__time-inner .second p, .result__flight-inner, .default-btn, .flight__right-inner {
+.service__item-inner, .result__show-price, .result__show-airname img, .result__right-inner, .result__mobileleft-inner, .result__item-inner, .result__time-inner .minute p,
+.result__time-inner .second p, .result__flight-inner, .select-btn, .default-btn {
   border-radius: 8px;
 }
 
@@ -1024,7 +1040,7 @@ a:hover {
 
 /* @@@@@@@@@@@@@  Extend Property CSS Writing Now  @@@@@@@@@@@@@@ */
 /* @@@@@@@@@@@@@  Extend Property CSS Writing Now  @@@@@@@@@@@@@@ */
-.result__item-inner, .default-btn, .flight__search-inner, .account__switch, .account__header, .banner__thumb, .banner__content h1 {
+.result__show-price, .result__item-inner, .default-btn, .flight__search-inner, .account__switch, .account__header, .banner__thumb, .banner__content h1 {
   text-align: center;
 }
 
@@ -1074,6 +1090,10 @@ ol {
   margin-top: 10px;
 }
 
+.result__show-price h3 small {
+  margin-top: 15px;
+}
+
 .account__social {
   margin-top: 20px;
 }
@@ -1103,7 +1123,7 @@ ol {
   margin-left: 15px;
 }
 
-.default-btn span svg,
+.result__show-price h3 span, .default-btn span svg,
 .default-btn span img, .footer__links-content img {
   margin-right: 5px;
 }
@@ -1131,11 +1151,11 @@ ol {
   padding: 10px;
 }
 
-.package__item-content, .offer__item-content, .offer__item-badge {
+.result__show-price, .package__item-content, .offer__item-content, .offer__item-badge {
   padding: 15px;
 }
 
-.flight__date-return, .flight__date-journey, .flight__item-inner {
+.result__mobileleft-inner, .flight__date-return, .flight__date-journey, .flight__item-inner {
   padding: 20px;
 }
 
@@ -1169,12 +1189,12 @@ ol {
   padding-bottom: 15px;
 }
 
-.result__left-inner {
+.result__right-inner, .result__left-inner {
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-.result__item-inner {
+.result__right-inner, .result__item-inner {
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -1439,7 +1459,7 @@ ol {
 .flight__choose .nav-link.active .round-btn::after {
   background-color: #F7A827;
 }
-.flight__item > span {
+.flight__item-swap {
   width: 40px;
   height: 40px;
   -webkit-transform: translateY(-50%);
@@ -1448,12 +1468,23 @@ ol {
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
   border-radius: 50%;
-  background-color: red;
+  background-color: #F7A827;
+  border: 1px solid #fff;
+  color: #101828;
   display: grid;
+  left: 50%;
+  bottom: -20%;
+  transform: translateX(-50%) rotate(90deg);
   place-items: center;
-  right: -30px;
-  top: 50%;
   z-index: 1;
+}
+@media (min-width: 992px) {
+  .flight__item-swap {
+    left: auto;
+    bottom: 34%;
+    transform: rotate(0deg);
+    right: -27px;
+  }
 }
 .flight__item-inner {
   border: 1px solid #fff;
@@ -1481,12 +1512,6 @@ ol {
 .flight__search-inner a:hover {
   background-color: #F7A827;
   color: #101828;
-}
-.flight__right-inner {
-  background-color: #fff;
-}
-.flight__rightitem-inner {
-  gap: 15px;
 }
 
 .default-btn {
@@ -1530,6 +1555,32 @@ ol {
 .default-btn--secondary:hover {
   background-color: #101828;
   color: #fff;
+}
+
+a.view-btn {
+  background-color: #DAEAF9;
+  color: #101828;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+}
+a.view-btn:hover {
+  background-color: #DAEAF9;
+  color: #101828;
+}
+
+.select-btn {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  transition: all 0.3s ease;
+  background: #005EB8;
+  font-weight: 600;
+  padding-block: 1rem;
+}
+.select-btn:focus {
+  border-color: #005EB8;
+  outline: 0;
+  box-shadow: none;
 }
 
 .offer__item-thumb {
@@ -1660,6 +1711,14 @@ ol {
 .result__left-inner {
   background-color: #fff;
 }
+.result__left-inner:not(.result__left.is-visible .result__left-inner) {
+  display: none;
+}
+@media (min-width: 992px) {
+  .result__left-inner {
+    display: block;
+  }
+}
 .result__time-inner {
   gap: 15px;
   border-bottom: 2px solid #EAECF0;
@@ -1699,6 +1758,92 @@ ol {
   .result__refoundable-inner .checkair .check label {
     font-size: 18px;
   }
+}
+.result__mobileleft-inner {
+  background: #DAEAF9;
+}
+.result__mobileleft-inner p {
+  font-weight: 500;
+  color: #101828;
+}
+.result__mobileleft-inner .search-filter {
+  cursor: pointer;
+}
+.result__right-inner {
+  background-color: #fff;
+  gap: 35px;
+}
+@media (min-width: 992px) {
+  .result__right-inner {
+    gap: 25px;
+  }
+}
+@media (min-width: 1400px) {
+  .result__right-inner {
+    justify-content: flex-end;
+    gap: 15px;
+    padding: 0;
+  }
+}
+.result__show-airname, .result__show-duration, .result__show-timeview {
+  gap: 15px;
+}
+.result__show-airname img {
+  padding: 8px;
+  box-shadow: 4px 4px 16px rgba(65, 147, 224, 0.08);
+}
+.result__show-airname p {
+  max-inline-size: 10ch;
+  font-weight: 500;
+  color: #101828;
+}
+.result__show-duration .start-time p,
+.result__show-duration .end-time p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #101828;
+}
+.result__show-duration .start-time small,
+.result__show-duration .end-time small {
+  font-size: 12px;
+  font-weight: 600;
+  color: #191D23;
+  opacity: 0.5;
+}
+.result__show-duration .thumb-img p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #33344F;
+}
+.result__show-timeview p {
+  font-weight: 700;
+  font-size: 14px;
+  color: #33344F;
+}
+.result__show-price {
+  background: #DAEAF9;
+}
+@media (min-width: 1400px) {
+  .result__show-price {
+    border-radius: 0px 8px 8px 0px;
+    padding: 25px;
+  }
+}
+.result__show-price h3 {
+  display: inline-flex;
+}
+.result__show-price h3 span {
+  font-size: 14px;
+  font-weight: 500;
+}
+.result__show-price h3 small {
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.4;
+}
+.result__show-price p {
+  font-weight: 500;
+  color: #101828;
 }
 
 .social {

@@ -64,3 +64,38 @@
         }
     }
 }
+
+a.view-btn {
+    background-color: $bg-color1;
+    color: $black-color;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    
+    &:hover{
+        background-color: $bg-color1;
+        color: $black-color;
+    }
+}
+
+
+.select-btn{
+    font-family: $title-font;
+    color: $white-color;
+    // padding: 0.7rem 1.5rem;
+    transition: $transition;
+    background: $theme-color;
+    font-weight: 600;
+    @extend %border-radius-8;
+    padding-block: 1rem;
+    
+
+    &:focus{
+        border-color: $theme-color;
+        outline: 0;
+        box-shadow: none;
+    }
+}
+// select.select-btn{
+//     background-color: red;
+// }
