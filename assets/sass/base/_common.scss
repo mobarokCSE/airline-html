@@ -34,6 +34,11 @@
 }
 
 
+// custom
+ul.dropdown-menu.custom-style.show{
+    margin-left: -60px !important;
+}
+
 // default input field style (overrides some bootstrap css)
 .form-control {
     background-color: transparent;

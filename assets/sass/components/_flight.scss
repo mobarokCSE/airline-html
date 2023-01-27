@@ -132,6 +132,31 @@
 
         }
 
+        .dropdown-menu {
+            .has-search {
+                .item-search {
+                    @extend %py-10,
+                    %pl-40;
+                    border: none;
+                    border-bottom: 1px solid $optional-color3;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+                input::placeholder {
+                    color: $optional-color2;
+                }
+
+                .form-control-feedback {
+                    @extend %p-abs;
+                    position: absolute;
+                    padding: 12px 15px;
+                    pointer-events: none;
+                    color: $optional-color2;
+                }
+            }
+        }
+
     }
 
     &__date {

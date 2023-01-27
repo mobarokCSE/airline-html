@@ -1,0 +1,17 @@
+.search{
+    &__item{
+        &-inner{
+            @extend %flex, %align-items-center, %justify-between, %py-5;
+        }
+        &-left{
+            p{
+                @extend %mb-5;
+            }
+            span{
+                @extend %text-1;
+                font-size: 11px;
+                opacity: .5;
+            }
+        }
+    }
+}

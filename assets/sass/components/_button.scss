@@ -96,6 +96,26 @@ a.view-btn {
         box-shadow: none;
     }
 }
+
+.choose-btn{
+    font-family: $title-font;
+    color: $white-color;
+    // padding: 0.7rem 1.5rem;
+    transition: $transition;
+    background: $theme-color;
+    font-weight: 600;
+    @extend %border-radius-8;
+    padding: 0.75rem;
+    display: inline-flex;
+    
+
+    &:focus{
+        border-color: $theme-color;
+        outline: 0;
+        box-shadow: none;
+    }
+}
+
 // select.select-btn{
 //     background-color: red;
 // }

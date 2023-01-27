@@ -1,0 +1,29 @@
+.passengercabin{
+    >p{
+        @extend %px-15, %pt-10, %pb-15;
+        font-size: 14px;
+        border-bottom: 1px solid $optional-color3;
+        
+    }
+    &__content{
+        &-inner{
+            @extend %px-15;
+
+           
+        }
+    }
+     &__cabin{
+                &-upper,
+                &-lower{
+                    @extend %flex, %justify-between;
+                    gap: 10px;
+                }
+                &-upper{
+                    @extend %py-15;
+                }
+                &-lower{
+                    @extend  %pb-15;
+                }
+            }
+}
+
