@@ -39,6 +39,15 @@ ul.dropdown-menu.custom-style.show{
     margin-left: -60px !important;
 }
 
+
+// step list
+.step-list{
+    @extend %mx-30;
+    li{
+        list-style: disc;
+    }
+}
+
 // default input field style (overrides some bootstrap css)
 .form-control {
     background-color: transparent;

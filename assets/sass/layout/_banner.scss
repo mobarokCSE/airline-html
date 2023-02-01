@@ -12,9 +12,9 @@
         padding-block: 180px;
     }
 
-    @include breakpoint(xxl) {
-        padding-block: 320px;
-    }
+    // @include breakpoint(xxl) {
+    //     padding-block: 320px;
+    // }
 
     &__content {
 
@@ -32,6 +32,12 @@
     }
 
     &__thumb {
+
+        // &-inner{
+        //     @extend %flex;
+        //     flex-wrap: nowrap;
+        // }
+
         @extend %text-center;
 
         @include breakpoint(lg) {

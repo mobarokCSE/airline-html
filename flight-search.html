@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML &mdash; Demo Template </title>
+  <title>KUSHIARA - TRAVELS LTD. </title>
 
   <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
 
@@ -26,6 +26,60 @@
   <!-- ===============>> Preloader start here <<================= -->
 
   <!-- ===============>> Preloader end here <<================= -->
+
+
+
+      <!-- ===============>> header start here <<================= -->
+    <header class="header-section">
+        <div class="header-bottom">
+            <div class="container">
+                <div class="header-wrapper">
+                    <div class="header-start">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img src="assets/images/logo/logo.png" alt="logo">
+                            </a>
+                        </div>
+                        <div class="menu-area">
+                            <ul class="menu">
+                                <li>
+                                    <a href="hotel.html">Hotel</a>
+                                </li>
+                                <li>
+                                    <a href="umrah.html">Umrah</a>
+                                </li>
+                                <li>
+                                    <a href="flight-search.html">Flight Booking</a>
+                                </li>
+                                <li>
+                                    <a href="money-exchange.html">Money Exchange</a>
+                                </li>
+                                <li>
+                                    <a href="promotions.html">Promotions</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="header-end">
+                        <div class="menu-area">
+                            <div class="header-btn">
+                                <a href="signin.html" class="default-btn default-btn--secondary">
+                                    <span>Sign in</span>
+                                </a>
+                            </div>
+                            <!-- toggle icons -->
+                            <div class="header-bar d-lg-none">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ===============>> header end here <<================= -->
 
 
   <!-- ===============>> Flight start here <<================= -->
@@ -255,6 +309,8 @@
                               <p class="mb-0">Cabin and Passengers Selection</p>
                               <div class="passengercabin__content">
                                 <div class="passengercabin__content-inner">
+
+                                  <!-- Todo::  -->
                                   <div class="passengercabin__cabin">
                                     <div class="passengercabin__cabin-upper">
                                       <div>
@@ -271,6 +327,45 @@
                                       <div>
                                         <a href="#" class="choose-btn"><span class="round-btn"></span> Economy</a>
                                       </div>
+                                    </div>
+                                  </div>
+                                  <div class="passengercabin__travelers">
+                                    <div class="passengercabin__travelers-item">
+                                      <div class="passengercabin__travelers-age">
+                                        <p class="mb-0">Adults</p>
+                                        <small>12 years and above</small>
+                                      </div>
+                                      <div class="passengercabin__travelers-number">
+                                        <input type="button" class="traveler-btn minus" value="-">
+                                        <p class="mb-0">1</p>
+                                        <input type="button" class="traveler-btn plus" value="+">
+                                      </div>
+                                    </div>
+                                    <div class="passengercabin__travelers-item">
+                                      <div class="passengercabin__travelers-age">
+                                        <p class="mb-0">Children</p>
+                                        <small>2-11 years at the time of travel</small>
+                                      </div>
+                                      <div class="passengercabin__travelers-number">
+                                        <input type="button" class="traveler-btn minus" value="-">
+                                        <p class="mb-0">0</p>
+                                        <input type="button" class="traveler-btn plus" value="+">
+                                      </div>
+                                    </div>
+                                    <div class="passengercabin__travelers-item">
+                                      <div class="passengercabin__travelers-age">
+                                        <p class="mb-0">Infant</p>
+                                        <small>Below 2 years</small>
+                                      </div>
+                                      <div class="passengercabin__travelers-number">
+                                        <input type="button" class="traveler-btn minus" value="-">
+                                        <p class="mb-0">0</p>
+                                        <input type="button" class="traveler-btn plus" value="+">
+                                      </div>
+                                    </div>
+
+                                    <div class="passengercabin__travelers-submit">
+                                      <a href="#" class="default-btn d-block">Done</a>
                                     </div>
                                   </div>
                                 </div>
@@ -291,24 +386,168 @@
               <div class="flight__oneway">
                 <div class="row g-3">
                   <div class="col-lg-3">
-                    <div class="flight__item">
-                      <div class="flight__item-inner">
+                    <div class="flight__item dropdown">
+                      <span class="flight__item-swap"><i class="fas fa-arrow-right-arrow-left"></i></span>
+                      <div class="flight__item-inner" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
                         <p>FROM</p>
                         <h4>Dhaka</h4>
-                        <small>DAC, Hazrat Shahjalal International Air</small>
+                        <small>DAC, Hazrat Shahjalal International Airport, Dhaka</small>
                       </div>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <div class="form-group has-search">
+                            <span class="fas fa-search form-control-feedback"></span>
+                            <input type="text" class="item-search" placeholder="Type to search">
+                          </div>
+                        </li>
+                        <li class="dropdown-item">
+                          <div class="search">
+                            <div class="search__item">
+                              <div class="search__item-inner">
+                                <div class="search__item-left">
+                                  <p>Dhaka Bangladesh</p>
+                                  <span>
+                                    Hazrat Shahjalal International Airport</span>
+                                </div>
+                                <div class="search__item-right">
+                                  <p class="mb-0">DAC</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="dropdown-item">
+                          <div class="search">
+                            <div class="search__item">
+                              <div class="search__item-inner">
+                                <div class="search__item-left">
+                                  <p>Dhaka Bangladesh</p>
+                                  <span>
+                                    Hazrat Shahjalal International Airport</span>
+                                </div>
+                                <div class="search__item-right">
+                                  <p class="mb-0">DAC</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="dropdown-item">
+                          <div class="search">
+                            <div class="search__item">
+                              <div class="search__item-inner">
+                                <div class="search__item-left">
+                                  <p>Dhaka Bangladesh</p>
+                                  <span>
+                                    Hazrat Shahjalal International Airport</span>
+                                </div>
+                                <div class="search__item-right">
+                                  <p class="mb-0">DAC</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="dropdown-item">
+                          <div class="search">
+                            <div class="search__item">
+                              <div class="search__item-inner">
+                                <div class="search__item-left">
+                                  <p>Dhaka Bangladesh</p>
+                                  <span>
+                                    Hazrat Shahjalal International Airport</span>
+                                </div>
+                                <div class="search__item-right">
+                                  <p class="mb-0">DAC</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                   <div class="col-lg-3">
                     <div class="flight__item">
-                      <!-- <div class="flight__item-swap">
-                                                <span></span>
-                                            </div> -->
-                      <div class="flight__item-inner">
+                      <div class="flight__item-inner" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
                         <p>TO</p>
                         <h4> Cox's Bazar </h4>
                         <small> DAC, Cox’s Bazar Airport</small>
                       </div>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <div class="form-group has-search">
+                            <span class="fas fa-search form-control-feedback"></span>
+                            <input type="text" class="item-search" placeholder="Type to search">
+                          </div>
+                        </li>
+                        <li class="dropdown-item">
+                          <div class="search">
+                            <div class="search__item">
+                              <div class="search__item-inner">
+                                <div class="search__item-left">
+                                  <p>Dhaka Bangladesh</p>
+                                  <span>
+                                    Hazrat Shahjalal International Airport</span>
+                                </div>
+                                <div class="search__item-right">
+                                  <p class="mb-0">DAC</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="dropdown-item">
+                          <div class="search">
+                            <div class="search__item">
+                              <div class="search__item-inner">
+                                <div class="search__item-left">
+                                  <p>Dhaka Bangladesh</p>
+                                  <span>
+                                    Hazrat Shahjalal International Airport</span>
+                                </div>
+                                <div class="search__item-right">
+                                  <p class="mb-0">DAC</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="dropdown-item">
+                          <div class="search">
+                            <div class="search__item">
+                              <div class="search__item-inner">
+                                <div class="search__item-left">
+                                  <p>Dhaka Bangladesh</p>
+                                  <span>
+                                    Hazrat Shahjalal International Airport</span>
+                                </div>
+                                <div class="search__item-right">
+                                  <p class="mb-0">DAC</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="dropdown-item">
+                          <div class="search">
+                            <div class="search__item">
+                              <div class="search__item-inner">
+                                <div class="search__item-left">
+                                  <p>Dhaka Bangladesh</p>
+                                  <span>
+                                    Hazrat Shahjalal International Airport</span>
+                                </div>
+                                <div class="search__item-right">
+                                  <p class="mb-0">DAC</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                   <div class="col-lg-4">
@@ -326,6 +565,7 @@
                           </div>
                           <div class="col-lg-6">
                             <div class="flight__date">
+                              <span class="date-reset-btn"><i class="fas fa-xmark"></i></span>
                               <div class="flight__date-return">
                                 <p>RETURN DATE</p>
                                 <h4>30 <span> Dec'23 </span></h4>
@@ -340,11 +580,84 @@
                   </div>
                   <div class="col-lg-2">
                     <div class="flight__item">
-                      <div class="flight__item-inner">
+                      <div class="flight__item-inner" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
                         <p>TRAVELER, CLASS</p>
                         <h4>1 Traveler</h4>
                         <small>Economy</small>
                       </div>
+                      <ul class="dropdown-menu custom-style">
+                        <li>
+                          <form action="#">
+                            <div class="passengercabin">
+                              <p class="mb-0">Cabin and Passengers Selection</p>
+                              <div class="passengercabin__content">
+                                <div class="passengercabin__content-inner">
+
+                                  <!-- Todo::  -->
+                                  <div class="passengercabin__cabin">
+                                    <div class="passengercabin__cabin-upper">
+                                      <div>
+                                        <a href="#" class="choose-btn"><span class="round-btn"></span> Economy</a>
+                                      </div>
+                                      <div>
+                                        <a href="#" class="choose-btn"><span class="round-btn"></span> Economy</a>
+                                      </div>
+                                    </div>
+                                    <div class="passengercabin__cabin-lower">
+                                      <div>
+                                        <a href="#" class="choose-btn"><span class="round-btn"></span> Economy</a>
+                                      </div>
+                                      <div>
+                                        <a href="#" class="choose-btn"><span class="round-btn"></span> Economy</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="passengercabin__travelers">
+                                    <div class="passengercabin__travelers-item">
+                                      <div class="passengercabin__travelers-age">
+                                        <p class="mb-0">Adults</p>
+                                        <small>12 years and above</small>
+                                      </div>
+                                      <div class="passengercabin__travelers-number">
+                                        <input type="button" class="traveler-btn minus" value="-">
+                                        <p class="mb-0">1</p>
+                                        <input type="button" class="traveler-btn plus" value="+">
+                                      </div>
+                                    </div>
+                                    <div class="passengercabin__travelers-item">
+                                      <div class="passengercabin__travelers-age">
+                                        <p class="mb-0">Children</p>
+                                        <small>2-11 years at the time of travel</small>
+                                      </div>
+                                      <div class="passengercabin__travelers-number">
+                                        <input type="button" class="traveler-btn minus" value="-">
+                                        <p class="mb-0">0</p>
+                                        <input type="button" class="traveler-btn plus" value="+">
+                                      </div>
+                                    </div>
+                                    <div class="passengercabin__travelers-item">
+                                      <div class="passengercabin__travelers-age">
+                                        <p class="mb-0">Infant</p>
+                                        <small>Below 2 years</small>
+                                      </div>
+                                      <div class="passengercabin__travelers-number">
+                                        <input type="button" class="traveler-btn minus" value="-">
+                                        <p class="mb-0">0</p>
+                                        <input type="button" class="traveler-btn plus" value="+">
+                                      </div>
+                                    </div>
+
+                                    <div class="passengercabin__travelers-submit">
+                                      <a href="#" class="default-btn d-block">Done</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -358,25 +671,168 @@
               <div class="flight__oneway">
                 <div class="row g-3">
                   <div class="col-lg-3">
-                    <div class="flight__item">
+                    <div class="flight__item dropdown">
                       <span class="flight__item-swap"><i class="fas fa-arrow-right-arrow-left"></i></span>
-                      <div class="flight__item-inner">
+                      <div class="flight__item-inner" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
                         <p>FROM</p>
                         <h4>Dhaka</h4>
-                        <small>DAC, Hazrat Shahjalal International Air</small>
+                        <small>DAC, Hazrat Shahjalal International Airport, Dhaka</small>
                       </div>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <div class="form-group has-search">
+                            <span class="fas fa-search form-control-feedback"></span>
+                            <input type="text" class="item-search" placeholder="Type to search">
+                          </div>
+                        </li>
+                        <li class="dropdown-item">
+                          <div class="search">
+                            <div class="search__item">
+                              <div class="search__item-inner">
+                                <div class="search__item-left">
+                                  <p>Dhaka Bangladesh</p>
+                                  <span>
+                                    Hazrat Shahjalal International Airport</span>
+                                </div>
+                                <div class="search__item-right">
+                                  <p class="mb-0">DAC</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="dropdown-item">
+                          <div class="search">
+                            <div class="search__item">
+                              <div class="search__item-inner">
+                                <div class="search__item-left">
+                                  <p>Dhaka Bangladesh</p>
+                                  <span>
+                                    Hazrat Shahjalal International Airport</span>
+                                </div>
+                                <div class="search__item-right">
+                                  <p class="mb-0">DAC</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="dropdown-item">
+                          <div class="search">
+                            <div class="search__item">
+                              <div class="search__item-inner">
+                                <div class="search__item-left">
+                                  <p>Dhaka Bangladesh</p>
+                                  <span>
+                                    Hazrat Shahjalal International Airport</span>
+                                </div>
+                                <div class="search__item-right">
+                                  <p class="mb-0">DAC</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="dropdown-item">
+                          <div class="search">
+                            <div class="search__item">
+                              <div class="search__item-inner">
+                                <div class="search__item-left">
+                                  <p>Dhaka Bangladesh</p>
+                                  <span>
+                                    Hazrat Shahjalal International Airport</span>
+                                </div>
+                                <div class="search__item-right">
+                                  <p class="mb-0">DAC</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                   <div class="col-lg-3">
                     <div class="flight__item">
-                      <!-- <div class="flight__item-swap">
-                                                <span></span>
-                                            </div> -->
-                      <div class="flight__item-inner">
+                      <div class="flight__item-inner" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
                         <p>TO</p>
                         <h4> Cox's Bazar </h4>
                         <small> DAC, Cox’s Bazar Airport</small>
                       </div>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <div class="form-group has-search">
+                            <span class="fas fa-search form-control-feedback"></span>
+                            <input type="text" class="item-search" placeholder="Type to search">
+                          </div>
+                        </li>
+                        <li class="dropdown-item">
+                          <div class="search">
+                            <div class="search__item">
+                              <div class="search__item-inner">
+                                <div class="search__item-left">
+                                  <p>Dhaka Bangladesh</p>
+                                  <span>
+                                    Hazrat Shahjalal International Airport</span>
+                                </div>
+                                <div class="search__item-right">
+                                  <p class="mb-0">DAC</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="dropdown-item">
+                          <div class="search">
+                            <div class="search__item">
+                              <div class="search__item-inner">
+                                <div class="search__item-left">
+                                  <p>Dhaka Bangladesh</p>
+                                  <span>
+                                    Hazrat Shahjalal International Airport</span>
+                                </div>
+                                <div class="search__item-right">
+                                  <p class="mb-0">DAC</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="dropdown-item">
+                          <div class="search">
+                            <div class="search__item">
+                              <div class="search__item-inner">
+                                <div class="search__item-left">
+                                  <p>Dhaka Bangladesh</p>
+                                  <span>
+                                    Hazrat Shahjalal International Airport</span>
+                                </div>
+                                <div class="search__item-right">
+                                  <p class="mb-0">DAC</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="dropdown-item">
+                          <div class="search">
+                            <div class="search__item">
+                              <div class="search__item-inner">
+                                <div class="search__item-left">
+                                  <p>Dhaka Bangladesh</p>
+                                  <span>
+                                    Hazrat Shahjalal International Airport</span>
+                                </div>
+                                <div class="search__item-right">
+                                  <p class="mb-0">DAC</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                   <div class="col-lg-3">
@@ -390,34 +846,250 @@
                   </div>
                   <div class="col-lg-3">
                     <div class="flight__item">
-                      <div class="flight__item-inner">
+                      <div class="flight__item-inner" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
                         <p>TRAVELER, CLASS</p>
                         <h4>1 Traveler</h4>
                         <small>Economy</small>
                       </div>
+                      <ul class="dropdown-menu custom-style">
+                        <li>
+                          <form action="#">
+                            <div class="passengercabin">
+                              <p class="mb-0">Cabin and Passengers Selection</p>
+                              <div class="passengercabin__content">
+                                <div class="passengercabin__content-inner">
+
+                                  <!-- Todo::  -->
+                                  <div class="passengercabin__cabin">
+                                    <div class="passengercabin__cabin-upper">
+                                      <div>
+                                        <a href="#" class="choose-btn"><span class="round-btn"></span> Economy</a>
+                                      </div>
+                                      <div>
+                                        <a href="#" class="choose-btn"><span class="round-btn"></span> Economy</a>
+                                      </div>
+                                    </div>
+                                    <div class="passengercabin__cabin-lower">
+                                      <div>
+                                        <a href="#" class="choose-btn"><span class="round-btn"></span> Economy</a>
+                                      </div>
+                                      <div>
+                                        <a href="#" class="choose-btn"><span class="round-btn"></span> Economy</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="passengercabin__travelers">
+                                    <div class="passengercabin__travelers-item">
+                                      <div class="passengercabin__travelers-age">
+                                        <p class="mb-0">Adults</p>
+                                        <small>12 years and above</small>
+                                      </div>
+                                      <div class="passengercabin__travelers-number">
+                                        <input type="button" class="traveler-btn minus" value="-">
+                                        <p class="mb-0">1</p>
+                                        <input type="button" class="traveler-btn plus" value="+">
+                                      </div>
+                                    </div>
+                                    <div class="passengercabin__travelers-item">
+                                      <div class="passengercabin__travelers-age">
+                                        <p class="mb-0">Children</p>
+                                        <small>2-11 years at the time of travel</small>
+                                      </div>
+                                      <div class="passengercabin__travelers-number">
+                                        <input type="button" class="traveler-btn minus" value="-">
+                                        <p class="mb-0">0</p>
+                                        <input type="button" class="traveler-btn plus" value="+">
+                                      </div>
+                                    </div>
+                                    <div class="passengercabin__travelers-item">
+                                      <div class="passengercabin__travelers-age">
+                                        <p class="mb-0">Infant</p>
+                                        <small>Below 2 years</small>
+                                      </div>
+                                      <div class="passengercabin__travelers-number">
+                                        <input type="button" class="traveler-btn minus" value="-">
+                                        <p class="mb-0">0</p>
+                                        <input type="button" class="traveler-btn plus" value="+">
+                                      </div>
+                                    </div>
+
+                                    <div class="passengercabin__travelers-submit">
+                                      <a href="#" class="default-btn d-block">Done</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </li>
+                      </ul>
                     </div>
                   </div>
 
                   <div class="col-lg-3">
-                    <div class="flight__item">
+                    <div class="flight__item dropdown">
                       <span class="flight__item-swap"><i class="fas fa-arrow-right-arrow-left"></i></span>
-                      <div class="flight__item-inner">
+                      <div class="flight__item-inner" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
                         <p>FROM</p>
                         <h4>Dhaka</h4>
-                        <small>DAC, Hazrat Shahjalal International Air</small>
+                        <small>DAC, Hazrat Shahjalal International Airport, Dhaka</small>
                       </div>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <div class="form-group has-search">
+                            <span class="fas fa-search form-control-feedback"></span>
+                            <input type="text" class="item-search" placeholder="Type to search">
+                          </div>
+                        </li>
+                        <li class="dropdown-item">
+                          <div class="search">
+                            <div class="search__item">
+                              <div class="search__item-inner">
+                                <div class="search__item-left">
+                                  <p>Dhaka Bangladesh</p>
+                                  <span>
+                                    Hazrat Shahjalal International Airport</span>
+                                </div>
+                                <div class="search__item-right">
+                                  <p class="mb-0">DAC</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="dropdown-item">
+                          <div class="search">
+                            <div class="search__item">
+                              <div class="search__item-inner">
+                                <div class="search__item-left">
+                                  <p>Dhaka Bangladesh</p>
+                                  <span>
+                                    Hazrat Shahjalal International Airport</span>
+                                </div>
+                                <div class="search__item-right">
+                                  <p class="mb-0">DAC</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="dropdown-item">
+                          <div class="search">
+                            <div class="search__item">
+                              <div class="search__item-inner">
+                                <div class="search__item-left">
+                                  <p>Dhaka Bangladesh</p>
+                                  <span>
+                                    Hazrat Shahjalal International Airport</span>
+                                </div>
+                                <div class="search__item-right">
+                                  <p class="mb-0">DAC</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="dropdown-item">
+                          <div class="search">
+                            <div class="search__item">
+                              <div class="search__item-inner">
+                                <div class="search__item-left">
+                                  <p>Dhaka Bangladesh</p>
+                                  <span>
+                                    Hazrat Shahjalal International Airport</span>
+                                </div>
+                                <div class="search__item-right">
+                                  <p class="mb-0">DAC</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                   <div class="col-lg-3">
                     <div class="flight__item">
-                      <!-- <div class="flight__item-swap">
-                                                <span></span>
-                                            </div> -->
-                      <div class="flight__item-inner">
+                      <div class="flight__item-inner" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
                         <p>TO</p>
                         <h4> Cox's Bazar </h4>
                         <small> DAC, Cox’s Bazar Airport</small>
                       </div>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <div class="form-group has-search">
+                            <span class="fas fa-search form-control-feedback"></span>
+                            <input type="text" class="item-search" placeholder="Type to search">
+                          </div>
+                        </li>
+                        <li class="dropdown-item">
+                          <div class="search">
+                            <div class="search__item">
+                              <div class="search__item-inner">
+                                <div class="search__item-left">
+                                  <p>Dhaka Bangladesh</p>
+                                  <span>
+                                    Hazrat Shahjalal International Airport</span>
+                                </div>
+                                <div class="search__item-right">
+                                  <p class="mb-0">DAC</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="dropdown-item">
+                          <div class="search">
+                            <div class="search__item">
+                              <div class="search__item-inner">
+                                <div class="search__item-left">
+                                  <p>Dhaka Bangladesh</p>
+                                  <span>
+                                    Hazrat Shahjalal International Airport</span>
+                                </div>
+                                <div class="search__item-right">
+                                  <p class="mb-0">DAC</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="dropdown-item">
+                          <div class="search">
+                            <div class="search__item">
+                              <div class="search__item-inner">
+                                <div class="search__item-left">
+                                  <p>Dhaka Bangladesh</p>
+                                  <span>
+                                    Hazrat Shahjalal International Airport</span>
+                                </div>
+                                <div class="search__item-right">
+                                  <p class="mb-0">DAC</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="dropdown-item">
+                          <div class="search">
+                            <div class="search__item">
+                              <div class="search__item-inner">
+                                <div class="search__item-left">
+                                  <p>Dhaka Bangladesh</p>
+                                  <span>
+                                    Hazrat Shahjalal International Airport</span>
+                                </div>
+                                <div class="search__item-right">
+                                  <p class="mb-0">DAC</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                   <div class="col-lg-3">
@@ -431,11 +1103,84 @@
                   </div>
                   <div class="col-lg-3">
                     <div class="flight__item">
-                      <div class="flight__item-inner">
+                      <div class="flight__item-inner" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
                         <p>TRAVELER, CLASS</p>
                         <h4>1 Traveler</h4>
                         <small>Economy</small>
                       </div>
+                      <ul class="dropdown-menu custom-style">
+                        <li>
+                          <form action="#">
+                            <div class="passengercabin">
+                              <p class="mb-0">Cabin and Passengers Selection</p>
+                              <div class="passengercabin__content">
+                                <div class="passengercabin__content-inner">
+
+                                  <!-- Todo::  -->
+                                  <div class="passengercabin__cabin">
+                                    <div class="passengercabin__cabin-upper">
+                                      <div>
+                                        <a href="#" class="choose-btn"><span class="round-btn"></span> Economy</a>
+                                      </div>
+                                      <div>
+                                        <a href="#" class="choose-btn"><span class="round-btn"></span> Economy</a>
+                                      </div>
+                                    </div>
+                                    <div class="passengercabin__cabin-lower">
+                                      <div>
+                                        <a href="#" class="choose-btn"><span class="round-btn"></span> Economy</a>
+                                      </div>
+                                      <div>
+                                        <a href="#" class="choose-btn"><span class="round-btn"></span> Economy</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="passengercabin__travelers">
+                                    <div class="passengercabin__travelers-item">
+                                      <div class="passengercabin__travelers-age">
+                                        <p class="mb-0">Adults</p>
+                                        <small>12 years and above</small>
+                                      </div>
+                                      <div class="passengercabin__travelers-number">
+                                        <input type="button" class="traveler-btn minus" value="-">
+                                        <p class="mb-0">1</p>
+                                        <input type="button" class="traveler-btn plus" value="+">
+                                      </div>
+                                    </div>
+                                    <div class="passengercabin__travelers-item">
+                                      <div class="passengercabin__travelers-age">
+                                        <p class="mb-0">Children</p>
+                                        <small>2-11 years at the time of travel</small>
+                                      </div>
+                                      <div class="passengercabin__travelers-number">
+                                        <input type="button" class="traveler-btn minus" value="-">
+                                        <p class="mb-0">0</p>
+                                        <input type="button" class="traveler-btn plus" value="+">
+                                      </div>
+                                    </div>
+                                    <div class="passengercabin__travelers-item">
+                                      <div class="passengercabin__travelers-age">
+                                        <p class="mb-0">Infant</p>
+                                        <small>Below 2 years</small>
+                                      </div>
+                                      <div class="passengercabin__travelers-number">
+                                        <input type="button" class="traveler-btn minus" value="-">
+                                        <p class="mb-0">0</p>
+                                        <input type="button" class="traveler-btn plus" value="+">
+                                      </div>
+                                    </div>
+
+                                    <div class="passengercabin__travelers-submit">
+                                      <a href="#" class="default-btn d-block">Done</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -550,7 +1295,6 @@
                       <h6>Filter Price Range</h6>
                       <form action="#">
                         <div class="checkair">
-
                           <input type="range" class="form-range" id="customRange1">
                           <label for="customRange1" class="form-label">5000 tk - 12200 tk</label>
                         </div>
@@ -642,7 +1386,7 @@
                         <div class="modal-dialog modal-dialog-scrollable">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                              <h6 class="modal-title" id="staticBackdropLabel">Filter search result</h6>
                               <button type="button" class="btn-close" data-bs-dismiss="modal"
                                 aria-label="Close"></button>
                             </div>
@@ -975,19 +1719,6 @@
   </section>
   <!-- ===============>> Flight search result end here <<================= -->
 
-  <div class="dropdown">
-    <div class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-      aria-expanded="false">
-      Dropdown link
-    </div>
-
-    <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
-    </ul>
-  </div>
-
 
   <!-- ===============>> footer start here <<================= -->
   <footer class="footer">
@@ -1029,9 +1760,10 @@
                     </div>
                     <div class="footer__links-content">
                       <ul class="footer__linklist">
-                        <li class="footer__linklist-item"> <a href="#">About Us</a> </li>
-                        <li class="footer__linklist-item"> <a href="#">Refund Policy</a> </li>
-                        <li class="footer__linklist-item"> <a href="#">Privacy Policy</a> </li>
+                        <li class="footer__linklist-item"> <a href="about-us.html">About Us</a> </li>
+                        <li class="footer__linklist-item"> <a href="contact.html">Contact Us</a></li>
+                        <li class="footer__linklist-item"> <a href="refund.html">Refund Policy</a> </li>
+                        <li class="footer__linklist-item"> <a href="privacy.html">Privacy Policy</a> </li>
                         <li class="footer__linklist-item"> <a href="#">Terms and Conditions</a>
                         </li>
                       </ul>
@@ -1111,6 +1843,7 @@
 
 
   <!-- vendor plugins -->
+  <script src="assets/js/jquery-3.6.3.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/all.min.js"></script>
   <script src="assets/js/swiper-bundle.min.js"></script>

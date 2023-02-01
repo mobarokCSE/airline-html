@@ -1,0 +1,52 @@
+.team {
+    @extend %of-hidden;
+    @include background-cover;
+
+    &__item {
+        @extend %p-rel;
+        background-color: $white-color;
+        border-radius: .5rem;
+
+        &-inner {
+            @extend %p-20, %border-radius-8;
+            background-color: $banner-color;
+        }
+
+        &-thumb {
+            @extend %of-hidden,
+            %mb-20;
+            border-radius: .25rem;
+
+            img {
+                @extend %w-100, %border-radius-8,
+                %h-100;
+                @include add-prefix(transition, $transition);
+                object-fit: cover;
+            }
+        }
+        &-author{
+            @extend %text-center;
+
+            p{
+                @extend %mb-0;
+            }
+        }
+
+        &:hover {
+
+            .team__item {
+                &-thumb {
+                    img {
+                        @include add-prefix(transform, scale(1.05));
+                    }
+                }
+
+                &-content {
+                    h4 {
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -54,68 +54,81 @@
     }
 
     &--secondary {
-        background-color: transparent;
+        background-color: $secondary-color;
         color: $title-color;
-        border-color: $title-color;
+        border-color: $secondary-color;
 
         &:hover {
-            background-color: $title-color;
-            color: $white-color;
+            background-color: $secondary-color;
+            color: $title-color;
         }
     }
+
 }
 
-a.view-btn {
+.view-btn {
     background-color: $bg-color1;
     color: $black-color;
     padding: 8px 16px;
     font-size: 14px;
     font-weight: 600;
-    
-    &:hover{
+
+    &:hover {
         background-color: $bg-color1;
         color: $black-color;
     }
 }
 
 
-.select-btn{
+.select-btn {
     font-family: $title-font;
-    color: $white-color;
-    // padding: 0.7rem 1.5rem;
     transition: $transition;
-    background: $theme-color;
-    font-weight: 600;
+    // border: 1px solid $white-color;
+    font-weight: 500;
     @extend %border-radius-8;
     padding-block: 1rem;
-    
 
-    &:focus{
-        border-color: $theme-color;
+
+    &:focus {
+        border-color: $white-color;
         outline: 0;
         box-shadow: none;
     }
 }
 
-.choose-btn{
+.choose-btn {
     font-family: $title-font;
-    color: $white-color;
-    // padding: 0.7rem 1.5rem;
-    transition: $transition;
-    background: $theme-color;
-    font-weight: 600;
-    @extend %border-radius-8;
+    background-color: $bg-color1;
+    color: $black-color;
+    border: 1px solid $bg-color1;
+    font-weight: 500;
+    @extend %border-radius-8, %align-items-center;
     padding: 0.75rem;
     display: inline-flex;
-    
 
-    &:focus{
-        border-color: $theme-color;
+
+    &:focus {
+        border-color: $bg-color1;
         outline: 0;
         box-shadow: none;
     }
 }
 
-// select.select-btn{
-//     background-color: red;
-// }
+
+
+
+.traveler-btn {
+    padding: 8px 4px 11px 4px;
+    border: 1.5px solid $optional-color3;
+    color: $optional-color3;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1px;
+    border-radius: 50%;
+    background: transparent;
+
+    &.plus {
+        border: 1.5px solid $optional-color2;
+        color: $optional-color2;
+    }
+}

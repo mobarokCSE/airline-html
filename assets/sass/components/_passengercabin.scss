@@ -1,29 +1,59 @@
-.passengercabin{
-    >p{
-        @extend %px-15, %pt-10, %pb-15;
+.passengercabin {
+    >p {
+        @extend %px-15,
+        %pt-10,
+        %pb-15;
         font-size: 14px;
         border-bottom: 1px solid $optional-color3;
-        
-    }
-    &__content{
-        &-inner{
-            @extend %px-15;
 
-           
+    }
+
+    &__content {
+        &-inner {
+            @extend %px-15;
         }
     }
-     &__cabin{
-                &-upper,
-                &-lower{
-                    @extend %flex, %justify-between;
-                    gap: 10px;
-                }
-                &-upper{
-                    @extend %py-15;
-                }
-                &-lower{
-                    @extend  %pb-15;
-                }
-            }
-}
 
+    &__cabin {
+
+        &-upper,
+        &-lower {
+            @extend %flex,
+            %justify-between;
+            gap: 10px;
+        }
+
+        &-upper {
+            @extend %py-15;
+        }
+
+        &-lower {
+            @extend %pb-15;
+        }
+    }
+
+
+    // Travelers
+    &__travelers{
+        &-item{
+            @extend %flex, %align-items-center, %justify-between, %py-10;
+        }
+    
+        &-age{
+            small{
+                font-size: 12px;
+                color: $optional-color4;
+            }
+        }
+        &-number{
+            @extend %flex, %align-items-center;
+            gap: 8px;
+
+        }
+
+        &-submit{
+            @extend %mt-15;
+        }
+    }
+
+}

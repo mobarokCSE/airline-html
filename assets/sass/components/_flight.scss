@@ -1,12 +1,18 @@
 .flight {
+    &.custom-style {
+        position: relative;
+        margin-top: -150px;
+    }
+
     &__header {
         @extend %pt-25,
         %pl-25,
         %flex;
-        background-color: $theme-color;
+        background-image: url(../../assets/images/icon/flight.png);
         color: $white-color;
-        width: 240px;
-        border-radius: 25px 99px 0px 0px;
+        width: 300px;
+        background-repeat: no-repeat;
+        background-size: cover;
 
         &-text {
             @extend %ml-15;
@@ -88,10 +94,7 @@
             display: grid;
             left: 50%;
             bottom: -20%;
-            // transform: translate(-50%, -50%);
             transform: translateX(-50%) rotate(90deg);
-
-            // transform: rotate(90deg);
             place-items: center;
             z-index: 1;
 
@@ -138,11 +141,14 @@
                     @extend %py-10,
                     %pl-40;
                     border: none;
+
                     border-bottom: 1px solid $optional-color3;
+
                     &:focus {
                         outline: none;
                     }
                 }
+
                 input::placeholder {
                     color: $optional-color2;
                 }
@@ -162,11 +168,40 @@
     &__date {
         &-journey {
             @extend %p-20;
-            border-right: 1px solid $white-color;
+            border-bottom: 1px solid $white-color;
+
+            @include breakpoint(lg) {
+                border-bottom: none;
+                border-right: 1px solid $white-color;
+            }
+
         }
 
         &-return {
             @extend %p-20;
+
+        }
+
+        .date-reset-btn {
+            @extend %p-abs;
+            height: 20px;
+            width: 20px;
+            font-size: 14px;
+            text-align: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            right: 8px;
+            top: 60%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background: $white-color;
+            color: $theme-color;
+
+            @include breakpoint(lg) {
+                top: 50%;
+            }
+
         }
     }
 

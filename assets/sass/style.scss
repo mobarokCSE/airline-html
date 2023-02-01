@@ -45,6 +45,7 @@ Tags: airline , travel company.
 // 4. Layout-related sections
 @import 'layout/header',
 'layout/banner',
+'layout/contact',
 'layout/account',
 'layout/footer';
 
@@ -52,7 +53,11 @@ Tags: airline , travel company.
 // 5. Components
 @import 'components/flight',
 'components/button',
+'components/preloader',
 'components/offer',
+'components/about',
+'components/team',
+'components/ads',
 'components/package',
 'components/partner',
 'components/result',

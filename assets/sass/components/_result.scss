@@ -72,12 +72,15 @@
             @extend %br-15,
             %py-30,
             %px-25;
-            &:not(.result__left.is-visible .result__left-inner){
+
+            &:not(.result__left.is-visible .result__left-inner) {
                 display: none;
             }
 
             @include breakpoint(lg) {
-                display: block;
+                &:not(.result__left.is-visible .result__left-inner) {
+                    display: block;
+                }
             }
         }
     }
@@ -225,7 +228,7 @@
                 color: $title-color;
             }
 
-            .search-filter{
+            .search-filter {
                 cursor: pointer;
             }
 

@@ -1,0 +1,17 @@
+.about{
+    &__content{
+        &-inner{
+            @include breakpoint(lg){
+                margin-top: 40px;
+            }
+        }
+    }
+    &__thumb{
+        &-inner{
+            text-align: center;
+            @include breakpoint(lg){
+                text-align: end;
+            }
+        }
+    }
+}
